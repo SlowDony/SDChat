@@ -176,7 +176,7 @@ UIScrollViewDelegate
     if(!_dataArr){
         
         NSArray *arr =@[
-                        @{@"msg":@"哈哈",@"msgID":@"1",@"sender":@"0",@"sendTime":@"06-23 10:44:17吕东结束了本次对话",@"msgType":@"0"},
+                        @{@"msg":@"哈哈",@"msgID":@"1",@"sender":@"0",@"sendTime":@"06-23",@"msgType":@"0"},
                         @{@"msg":@"就是不是搞死你大当家氨",@"msgID":@"2",@"sender":@"1",@"sendTime":@"02:20",@"msgType":@"3"},
                         @{@"msg":@"你在干啥就是不是搞死你大当家氨",@"msgID":@"3",@"sender":@"0",@"sendTime":@"02:30",@"msgType":@"0"},
                         @{@"msg":@"不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨",@"msgID":@"4",@"sender":@"1",@"sendTime":@"02:40",@"msgType":@"0"},
@@ -222,7 +222,7 @@ UIScrollViewDelegate
 
 -(SDChatDetailTableView *)chatTableView{
     if(!_chatTableView){
-        _chatTableView = [[SDChatDetailTableView alloc] initWithFrame:CGRectMake(0, 0, SDDeviceWidth, SDDeviceHeight-64-kInputViewHeight) style:UITableViewStylePlain];
+        _chatTableView = [[SDChatDetailTableView alloc] initWithFrame:CGRectMake(0, 0, SDDeviceWidth, SDDeviceHeight-kInputViewHeight) style:UITableViewStylePlain];
         
         _chatTableView.sdLongDelegate=self;
         _chatTableView.tableHeaderView = self.headView;
@@ -232,7 +232,7 @@ UIScrollViewDelegate
 // 输入view
 -(SDChatInputView *)chatInputView{
     if (!_chatInputView){
-        _chatInputView =[[SDChatInputView alloc]initWithFrame:CGRectMake(0,SDDeviceHeight-64-kInputViewHeight, SDDeviceWidth, kInputViewHeight)];
+        _chatInputView =[[SDChatInputView alloc]initWithFrame:CGRectMake(0,SDDeviceHeight-kInputViewHeight, SDDeviceWidth, kInputViewHeight)];
         
         _chatInputView.sd_delegate=self;
         
@@ -269,13 +269,11 @@ UIScrollViewDelegate
 -(void)setUI{
 
     [self.view addSubview:self.bjView];
+    self.view.backgroundColor=[UIColor whiteColor];
     [self.bjView addSubview:self.chatTableView];
-    if (self.chat.isONLine){
-        self.chatTableView.frame =CGRectMake(0, 0, SDDeviceWidth, SDDeviceHeight-64-kInputViewHeight);
-        [self.bjView addSubview:self.chatInputView];
-    }else {
-        self.chatTableView.frame =CGRectMake(0, 0, SDDeviceWidth, SDDeviceHeight-64);
-    }
+    self.chatTableView.dataArray =self.dataArr;
+    [self.chatTableView reloadData];
+    [self.bjView addSubview:self.chatInputView];
 
     SDLog(@"self.bjview.subie:%@",self.bjView.subviews);
 //    [self.chatInputView.chatTextFiled becomeFirstResponder];

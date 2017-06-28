@@ -13,13 +13,13 @@
 -(instancetype)initWithChatMessageDic:(NSDictionary *)dic{
     self =[super init];
     if (self){
-        self.msg=dic[@"MESSAGE"]; //消息
-        self.msgID=dic[@"ID"]; //消息id
-        self.sender=dic[@"SENDER"]; //1是客服 /0患者
-        self.sendTime=dic[@"SENDER"];
-        self.msgType=[dic[@"TYPE"] integerValue]; //消息类型
-        self.staffName =dic[@"STAFF_NAME"];  //客服名字
-        self.staffID =dic[@"HOSPITAL_STAFF_ID"]; //客服id
+        self.msg=dic[@"msg"]; //消息
+        self.msgID=dic[@"msgID"]; //消息id
+        self.sender=dic[@"sender"]; //1是客服 /0患者
+        self.sendTime=dic[@"sendTime"];
+        self.msgType=[dic[@"msgType"] integerValue]; //消息类型
+        self.staffName =dic[@"staffName"];  //客服名字
+        self.staffID =dic[@"staffID"]; //客服id
     }
     return self;
 }

@@ -23,7 +23,9 @@
 
 
 @interface SDChatViewController ()
-
+<
+SDChatTableViewDelegate
+>
 /**
  总数据源
  */
@@ -90,6 +92,7 @@
     if(!_chatTableView){
         _chatTableView = [[SDChatTableView alloc] initWithFrame:CGRectMake(0, 0, SDDeviceWidth, SDDeviceHeight-64-44) style:UITableViewStylePlain];
         _chatTableView.tableFooterView =[UIView new];
+        _chatTableView.sd_delegate=self;
 
     }
     return _chatTableView;
@@ -112,11 +115,12 @@
     [self.view addSubview:self.chatTableView];
   
 }
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+-(void)SDChatTableView:(id)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SDChatDetailViewController *v =[[SDChatDetailViewController alloc]init];
-    v.hidesBottomBarWhenPushed=YES;
-    NSArray *arr =self.dataArr[indexPath.section];
-    SDChat  *chat =arr[indexPath.row];
+    
+    
+    SDChat  *chat =self.dataArr[indexPath.row];
     v.chat =chat;
     [self.navigationController pushViewController:v animated:YES];
 }

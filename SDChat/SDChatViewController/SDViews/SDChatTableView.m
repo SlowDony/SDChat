@@ -53,6 +53,11 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([self.sd_delegate respondsToSelector:@selector(SDChatTableView:didSelectRowAtIndexPath:)]) {
+        [self.sd_delegate SDChatTableView:self didSelectRowAtIndexPath:indexPath];
+    }
+}
 
 #pragma mark ----------UITabelViewDelegate----------
 
