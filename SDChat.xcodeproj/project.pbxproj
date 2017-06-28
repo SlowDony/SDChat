@@ -15,6 +15,47 @@
 		EF8A1FB51F02B19300E526B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8A1FB31F02B19300E526B3 /* LaunchScreen.storyboard */; };
 		EF8A1FC01F02B19300E526B3 /* SDChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A1FBF1F02B19300E526B3 /* SDChatTests.m */; };
 		EF8A1FCB1F02B19300E526B3 /* SDChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A1FCA1F02B19300E526B3 /* SDChatUITests.m */; };
+		EFF0E4B61F03E9E2008A337A /* SDChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E47C1F03E9E2008A337A /* SDChatViewController.m */; };
+		EFF0E4B71F03E9E2008A337A /* SDChatMessageConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E47F1F03E9E2008A337A /* SDChatMessageConst.m */; };
+		EFF0E4B81F03E9E2008A337A /* SDChatDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4831F03E9E2008A337A /* SDChatDetail.m */; };
+		EFF0E4B91F03E9E2008A337A /* SDChatDetailFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4851F03E9E2008A337A /* SDChatDetailFrame.m */; };
+		EFF0E4BA1F03E9E2008A337A /* SDChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4871F03E9E2008A337A /* SDChatMessage.m */; };
+		EFF0E4BB1F03E9E2008A337A /* SDChat.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E48A1F03E9E2008A337A /* SDChat.m */; };
+		EFF0E4BC1F03E9E2008A337A /* SDFaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E48D1F03E9E2008A337A /* SDFaceModel.m */; };
+		EFF0E4BD1F03E9E2008A337A /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4901F03E9E2008A337A /* NSString+Emoji.m */; };
+		EFF0E4BE1F03E9E2008A337A /* SDFaceArrTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4921F03E9E2008A337A /* SDFaceArrTool.m */; };
+		EFF0E4C01F03E9E2008A337A /* SDChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4971F03E9E2008A337A /* SDChatDetailViewController.m */; };
+		EFF0E4C11F03E9E2008A337A /* SDChatAddFileKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E49A1F03E9E2008A337A /* SDChatAddFileKeyBoardView.m */; };
+		EFF0E4C21F03E9E2008A337A /* SDChatConnectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E49C1F03E9E2008A337A /* SDChatConnectionTableViewCell.m */; };
+		EFF0E4C31F03E9E2008A337A /* SDChatDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E49E1F03E9E2008A337A /* SDChatDetailTableView.m */; };
+		EFF0E4C41F03E9E2008A337A /* SDChatDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4A01F03E9E2008A337A /* SDChatDetailTableViewCell.m */; };
+		EFF0E4C51F03E9E2008A337A /* SDChatAddFacekeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4A31F03E9E2008A337A /* SDChatAddFacekeyBoardView.m */; };
+		EFF0E4C61F03E9E2008A337A /* SDFaceListView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4A51F03E9E2008A337A /* SDFaceListView.m */; };
+		EFF0E4C71F03E9E2008A337A /* SDFaceToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4A71F03E9E2008A337A /* SDFaceToolBar.m */; };
+		EFF0E4C81F03E9E2008A337A /* SDFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4A91F03E9E2008A337A /* SDFaceView.m */; };
+		EFF0E4C91F03E9E2008A337A /* SDFaceViewBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4AB1F03E9E2008A337A /* SDFaceViewBtn.m */; };
+		EFF0E4CA1F03E9E2008A337A /* SDChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4AD1F03E9E2008A337A /* SDChatInputView.m */; };
+		EFF0E4CD1F03E9E2008A337A /* SDChatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4B31F03E9E2008A337A /* SDChatTableView.m */; };
+		EFF0E4CE1F03E9E2008A337A /* SDChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */; };
+		EFF0E4DF1F03F25C008A337A /* NSArray+NSLogLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4D21F03F25C008A337A /* NSArray+NSLogLocale.m */; };
+		EFF0E4E01F03F25C008A337A /* NSDictionary+ChinesePrint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4D41F03F25C008A337A /* NSDictionary+ChinesePrint.m */; };
+		EFF0E4E11F03F25C008A337A /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4D61F03F25C008A337A /* UIBarButtonItem+Extension.m */; };
+		EFF0E4E21F03F25C008A337A /* UIButton+buton_Text.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4D81F03F25C008A337A /* UIButton+buton_Text.m */; };
+		EFF0E4E31F03F25C008A337A /* UIColor+UIColor_Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4DA1F03F25C008A337A /* UIColor+UIColor_Hex.m */; };
+		EFF0E4E41F03F25C008A337A /* UIImage+YFResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4DC1F03F25C008A337A /* UIImage+YFResizing.m */; };
+		EFF0E4E51F03F25C008A337A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4DE1F03F25C008A337A /* UIView+Extension.m */; };
+		EFF0E5001F03FBA0008A337A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EFF0E4E81F03FBA0008A337A /* LICENSE */; };
+		EFF0E5011F03FBA0008A337A /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */; };
+		EFF0E5021F03FBA0008A337A /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4EE1F03FBA0008A337A /* MJFoundation.m */; };
+		EFF0E5031F03FBA0008A337A /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F01F03FBA0008A337A /* MJProperty.m */; };
+		EFF0E5041F03FBA0008A337A /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F21F03FBA0008A337A /* MJPropertyKey.m */; };
+		EFF0E5051F03FBA0008A337A /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F41F03FBA0008A337A /* MJPropertyType.m */; };
+		EFF0E5061F03FBA0008A337A /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F61F03FBA0008A337A /* NSObject+MJClass.m */; };
+		EFF0E5071F03FBA0008A337A /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F81F03FBA0008A337A /* NSObject+MJCoding.m */; };
+		EFF0E5081F03FBA0008A337A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FA1F03FBA0008A337A /* NSObject+MJKeyValue.m */; };
+		EFF0E5091F03FBA0008A337A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FC1F03FBA0008A337A /* NSObject+MJProperty.m */; };
+		EFF0E50A1F03FBA0008A337A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FE1F03FBA0008A337A /* NSString+MJExtension.m */; };
+		EFF0E50B1F03FBA0008A337A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FF1F03FBA0008A337A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +93,88 @@
 		EF8A1FCA1F02B19300E526B3 /* SDChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDChatUITests.m; sourceTree = "<group>"; };
 		EF8A1FCC1F02B19300E526B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8A20351F02B34100E526B3 /* SDHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHeader.h; sourceTree = "<group>"; };
+		EFF0E47B1F03E9E2008A337A /* SDChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatViewController.h; sourceTree = "<group>"; };
+		EFF0E47C1F03E9E2008A337A /* SDChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatViewController.m; sourceTree = "<group>"; };
+		EFF0E47E1F03E9E2008A337A /* SDChatMessageConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatMessageConst.h; sourceTree = "<group>"; };
+		EFF0E47F1F03E9E2008A337A /* SDChatMessageConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatMessageConst.m; sourceTree = "<group>"; };
+		EFF0E4821F03E9E2008A337A /* SDChatDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatDetail.h; sourceTree = "<group>"; };
+		EFF0E4831F03E9E2008A337A /* SDChatDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatDetail.m; sourceTree = "<group>"; };
+		EFF0E4841F03E9E2008A337A /* SDChatDetailFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatDetailFrame.h; sourceTree = "<group>"; };
+		EFF0E4851F03E9E2008A337A /* SDChatDetailFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatDetailFrame.m; sourceTree = "<group>"; };
+		EFF0E4861F03E9E2008A337A /* SDChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatMessage.h; sourceTree = "<group>"; };
+		EFF0E4871F03E9E2008A337A /* SDChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatMessage.m; sourceTree = "<group>"; };
+		EFF0E4891F03E9E2008A337A /* SDChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChat.h; sourceTree = "<group>"; };
+		EFF0E48A1F03E9E2008A337A /* SDChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChat.m; sourceTree = "<group>"; };
+		EFF0E48C1F03E9E2008A337A /* SDFaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFaceModel.h; sourceTree = "<group>"; };
+		EFF0E48D1F03E9E2008A337A /* SDFaceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFaceModel.m; sourceTree = "<group>"; };
+		EFF0E48F1F03E9E2008A337A /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		EFF0E4901F03E9E2008A337A /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		EFF0E4911F03E9E2008A337A /* SDFaceArrTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFaceArrTool.h; sourceTree = "<group>"; };
+		EFF0E4921F03E9E2008A337A /* SDFaceArrTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFaceArrTool.m; sourceTree = "<group>"; };
+		EFF0E4961F03E9E2008A337A /* SDChatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatDetailViewController.h; sourceTree = "<group>"; };
+		EFF0E4971F03E9E2008A337A /* SDChatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatDetailViewController.m; sourceTree = "<group>"; };
+		EFF0E4991F03E9E2008A337A /* SDChatAddFileKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatAddFileKeyBoardView.h; sourceTree = "<group>"; };
+		EFF0E49A1F03E9E2008A337A /* SDChatAddFileKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatAddFileKeyBoardView.m; sourceTree = "<group>"; };
+		EFF0E49B1F03E9E2008A337A /* SDChatConnectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatConnectionTableViewCell.h; sourceTree = "<group>"; };
+		EFF0E49C1F03E9E2008A337A /* SDChatConnectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatConnectionTableViewCell.m; sourceTree = "<group>"; };
+		EFF0E49D1F03E9E2008A337A /* SDChatDetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatDetailTableView.h; sourceTree = "<group>"; };
+		EFF0E49E1F03E9E2008A337A /* SDChatDetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatDetailTableView.m; sourceTree = "<group>"; };
+		EFF0E49F1F03E9E2008A337A /* SDChatDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatDetailTableViewCell.h; sourceTree = "<group>"; };
+		EFF0E4A01F03E9E2008A337A /* SDChatDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatDetailTableViewCell.m; sourceTree = "<group>"; };
+		EFF0E4A21F03E9E2008A337A /* SDChatAddFacekeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatAddFacekeyBoardView.h; sourceTree = "<group>"; };
+		EFF0E4A31F03E9E2008A337A /* SDChatAddFacekeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatAddFacekeyBoardView.m; sourceTree = "<group>"; };
+		EFF0E4A41F03E9E2008A337A /* SDFaceListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFaceListView.h; sourceTree = "<group>"; };
+		EFF0E4A51F03E9E2008A337A /* SDFaceListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFaceListView.m; sourceTree = "<group>"; };
+		EFF0E4A61F03E9E2008A337A /* SDFaceToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFaceToolBar.h; sourceTree = "<group>"; };
+		EFF0E4A71F03E9E2008A337A /* SDFaceToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFaceToolBar.m; sourceTree = "<group>"; };
+		EFF0E4A81F03E9E2008A337A /* SDFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFaceView.h; sourceTree = "<group>"; };
+		EFF0E4A91F03E9E2008A337A /* SDFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFaceView.m; sourceTree = "<group>"; };
+		EFF0E4AA1F03E9E2008A337A /* SDFaceViewBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFaceViewBtn.h; sourceTree = "<group>"; };
+		EFF0E4AB1F03E9E2008A337A /* SDFaceViewBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFaceViewBtn.m; sourceTree = "<group>"; };
+		EFF0E4AC1F03E9E2008A337A /* SDChatInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatInputView.h; sourceTree = "<group>"; };
+		EFF0E4AD1F03E9E2008A337A /* SDChatInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatInputView.m; sourceTree = "<group>"; };
+		EFF0E4B21F03E9E2008A337A /* SDChatTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatTableView.h; sourceTree = "<group>"; };
+		EFF0E4B31F03E9E2008A337A /* SDChatTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatTableView.m; sourceTree = "<group>"; };
+		EFF0E4B41F03E9E2008A337A /* SDChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatTableViewCell.h; sourceTree = "<group>"; };
+		EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatTableViewCell.m; sourceTree = "<group>"; };
+		EFF0E4CF1F03EF3D008A337A /* SDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPrefixHeader.pch; sourceTree = "<group>"; };
+		EFF0E4D11F03F25C008A337A /* NSArray+NSLogLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSLogLocale.h"; sourceTree = "<group>"; };
+		EFF0E4D21F03F25C008A337A /* NSArray+NSLogLocale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSLogLocale.m"; sourceTree = "<group>"; };
+		EFF0E4D31F03F25C008A337A /* NSDictionary+ChinesePrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ChinesePrint.h"; sourceTree = "<group>"; };
+		EFF0E4D41F03F25C008A337A /* NSDictionary+ChinesePrint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ChinesePrint.m"; sourceTree = "<group>"; };
+		EFF0E4D51F03F25C008A337A /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		EFF0E4D61F03F25C008A337A /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		EFF0E4D71F03F25C008A337A /* UIButton+buton_Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+buton_Text.h"; sourceTree = "<group>"; };
+		EFF0E4D81F03F25C008A337A /* UIButton+buton_Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+buton_Text.m"; sourceTree = "<group>"; };
+		EFF0E4D91F03F25C008A337A /* UIColor+UIColor_Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColor_Hex.h"; sourceTree = "<group>"; };
+		EFF0E4DA1F03F25C008A337A /* UIColor+UIColor_Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColor_Hex.m"; sourceTree = "<group>"; };
+		EFF0E4DB1F03F25C008A337A /* UIImage+YFResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFResizing.h"; sourceTree = "<group>"; };
+		EFF0E4DC1F03F25C008A337A /* UIImage+YFResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFResizing.m"; sourceTree = "<group>"; };
+		EFF0E4DD1F03F25C008A337A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		EFF0E4DE1F03F25C008A337A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		EFF0E4E81F03FBA0008A337A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EFF0E4EA1F03FBA0008A337A /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		EFF0E4EB1F03FBA0008A337A /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		EFF0E4ED1F03FBA0008A337A /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		EFF0E4EE1F03FBA0008A337A /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		EFF0E4EF1F03FBA0008A337A /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		EFF0E4F01F03FBA0008A337A /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		EFF0E4F11F03FBA0008A337A /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		EFF0E4F21F03FBA0008A337A /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		EFF0E4F31F03FBA0008A337A /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		EFF0E4F41F03FBA0008A337A /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		EFF0E4F51F03FBA0008A337A /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		EFF0E4F61F03FBA0008A337A /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		EFF0E4F71F03FBA0008A337A /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		EFF0E4F81F03FBA0008A337A /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		EFF0E4F91F03FBA0008A337A /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		EFF0E4FA1F03FBA0008A337A /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		EFF0E4FB1F03FBA0008A337A /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		EFF0E4FC1F03FBA0008A337A /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		EFF0E4FD1F03FBA0008A337A /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		EFF0E4FE1F03FBA0008A337A /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		EFF0E4FF1F03FBA0008A337A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +225,15 @@
 		EF8A1FA41F02B19300E526B3 /* SDChat */ = {
 			isa = PBXGroup;
 			children = (
+				EFF0E4E61F03FB53008A337A /* SDLib_resource */,
+				EFF0E4D01F03F25C008A337A /* Category+Extension  */,
+				EFF0E47A1F03E9E2008A337A /* SDChatViewController */,
 				EF8A1FA81F02B19300E526B3 /* AppDelegate.h */,
 				EF8A1FA91F02B19300E526B3 /* AppDelegate.m */,
 				EF8A1FAB1F02B19300E526B3 /* ViewController.h */,
 				EF8A1FAC1F02B19300E526B3 /* ViewController.m */,
 				EF8A20351F02B34100E526B3 /* SDHeader.h */,
+				EFF0E4CF1F03EF3D008A337A /* SDPrefixHeader.pch */,
 				EF8A1FAE1F02B19300E526B3 /* Main.storyboard */,
 				EF8A1FB11F02B19300E526B3 /* Assets.xcassets */,
 				EF8A1FB31F02B19300E526B3 /* LaunchScreen.storyboard */,
@@ -140,6 +267,196 @@
 				EF8A1FCC1F02B19300E526B3 /* Info.plist */,
 			);
 			path = SDChatUITests;
+			sourceTree = "<group>";
+		};
+		EFF0E47A1F03E9E2008A337A /* SDChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E47B1F03E9E2008A337A /* SDChatViewController.h */,
+				EFF0E47C1F03E9E2008A337A /* SDChatViewController.m */,
+				EFF0E47D1F03E9E2008A337A /* SDConfig */,
+				EFF0E4801F03E9E2008A337A /* SDModels */,
+				EFF0E48E1F03E9E2008A337A /* SDTools */,
+				EFF0E4931F03E9E2008A337A /* SDViewControllers */,
+				EFF0E4981F03E9E2008A337A /* SDViews */,
+			);
+			path = SDChatViewController;
+			sourceTree = "<group>";
+		};
+		EFF0E47D1F03E9E2008A337A /* SDConfig */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E47E1F03E9E2008A337A /* SDChatMessageConst.h */,
+				EFF0E47F1F03E9E2008A337A /* SDChatMessageConst.m */,
+			);
+			path = SDConfig;
+			sourceTree = "<group>";
+		};
+		EFF0E4801F03E9E2008A337A /* SDModels */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4811F03E9E2008A337A /* SDChatDetailModel */,
+				EFF0E4881F03E9E2008A337A /* SDChatModel */,
+				EFF0E48B1F03E9E2008A337A /* SDFaceModel */,
+			);
+			path = SDModels;
+			sourceTree = "<group>";
+		};
+		EFF0E4811F03E9E2008A337A /* SDChatDetailModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4821F03E9E2008A337A /* SDChatDetail.h */,
+				EFF0E4831F03E9E2008A337A /* SDChatDetail.m */,
+				EFF0E4841F03E9E2008A337A /* SDChatDetailFrame.h */,
+				EFF0E4851F03E9E2008A337A /* SDChatDetailFrame.m */,
+				EFF0E4861F03E9E2008A337A /* SDChatMessage.h */,
+				EFF0E4871F03E9E2008A337A /* SDChatMessage.m */,
+			);
+			path = SDChatDetailModel;
+			sourceTree = "<group>";
+		};
+		EFF0E4881F03E9E2008A337A /* SDChatModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4891F03E9E2008A337A /* SDChat.h */,
+				EFF0E48A1F03E9E2008A337A /* SDChat.m */,
+			);
+			path = SDChatModel;
+			sourceTree = "<group>";
+		};
+		EFF0E48B1F03E9E2008A337A /* SDFaceModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E48C1F03E9E2008A337A /* SDFaceModel.h */,
+				EFF0E48D1F03E9E2008A337A /* SDFaceModel.m */,
+			);
+			path = SDFaceModel;
+			sourceTree = "<group>";
+		};
+		EFF0E48E1F03E9E2008A337A /* SDTools */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E48F1F03E9E2008A337A /* NSString+Emoji.h */,
+				EFF0E4901F03E9E2008A337A /* NSString+Emoji.m */,
+				EFF0E4911F03E9E2008A337A /* SDFaceArrTool.h */,
+				EFF0E4921F03E9E2008A337A /* SDFaceArrTool.m */,
+			);
+			path = SDTools;
+			sourceTree = "<group>";
+		};
+		EFF0E4931F03E9E2008A337A /* SDViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4961F03E9E2008A337A /* SDChatDetailViewController.h */,
+				EFF0E4971F03E9E2008A337A /* SDChatDetailViewController.m */,
+			);
+			path = SDViewControllers;
+			sourceTree = "<group>";
+		};
+		EFF0E4981F03E9E2008A337A /* SDViews */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4991F03E9E2008A337A /* SDChatAddFileKeyBoardView.h */,
+				EFF0E49A1F03E9E2008A337A /* SDChatAddFileKeyBoardView.m */,
+				EFF0E49B1F03E9E2008A337A /* SDChatConnectionTableViewCell.h */,
+				EFF0E49C1F03E9E2008A337A /* SDChatConnectionTableViewCell.m */,
+				EFF0E49D1F03E9E2008A337A /* SDChatDetailTableView.h */,
+				EFF0E49E1F03E9E2008A337A /* SDChatDetailTableView.m */,
+				EFF0E49F1F03E9E2008A337A /* SDChatDetailTableViewCell.h */,
+				EFF0E4A01F03E9E2008A337A /* SDChatDetailTableViewCell.m */,
+				EFF0E4A11F03E9E2008A337A /* SDChatFace */,
+				EFF0E4AC1F03E9E2008A337A /* SDChatInputView.h */,
+				EFF0E4AD1F03E9E2008A337A /* SDChatInputView.m */,
+				EFF0E4B21F03E9E2008A337A /* SDChatTableView.h */,
+				EFF0E4B31F03E9E2008A337A /* SDChatTableView.m */,
+				EFF0E4B41F03E9E2008A337A /* SDChatTableViewCell.h */,
+				EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */,
+			);
+			path = SDViews;
+			sourceTree = "<group>";
+		};
+		EFF0E4A11F03E9E2008A337A /* SDChatFace */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4A21F03E9E2008A337A /* SDChatAddFacekeyBoardView.h */,
+				EFF0E4A31F03E9E2008A337A /* SDChatAddFacekeyBoardView.m */,
+				EFF0E4A41F03E9E2008A337A /* SDFaceListView.h */,
+				EFF0E4A51F03E9E2008A337A /* SDFaceListView.m */,
+				EFF0E4A61F03E9E2008A337A /* SDFaceToolBar.h */,
+				EFF0E4A71F03E9E2008A337A /* SDFaceToolBar.m */,
+				EFF0E4A81F03E9E2008A337A /* SDFaceView.h */,
+				EFF0E4A91F03E9E2008A337A /* SDFaceView.m */,
+				EFF0E4AA1F03E9E2008A337A /* SDFaceViewBtn.h */,
+				EFF0E4AB1F03E9E2008A337A /* SDFaceViewBtn.m */,
+			);
+			path = SDChatFace;
+			sourceTree = "<group>";
+		};
+		EFF0E4D01F03F25C008A337A /* Category+Extension  */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4D11F03F25C008A337A /* NSArray+NSLogLocale.h */,
+				EFF0E4D21F03F25C008A337A /* NSArray+NSLogLocale.m */,
+				EFF0E4D31F03F25C008A337A /* NSDictionary+ChinesePrint.h */,
+				EFF0E4D41F03F25C008A337A /* NSDictionary+ChinesePrint.m */,
+				EFF0E4D51F03F25C008A337A /* UIBarButtonItem+Extension.h */,
+				EFF0E4D61F03F25C008A337A /* UIBarButtonItem+Extension.m */,
+				EFF0E4D71F03F25C008A337A /* UIButton+buton_Text.h */,
+				EFF0E4D81F03F25C008A337A /* UIButton+buton_Text.m */,
+				EFF0E4D91F03F25C008A337A /* UIColor+UIColor_Hex.h */,
+				EFF0E4DA1F03F25C008A337A /* UIColor+UIColor_Hex.m */,
+				EFF0E4DB1F03F25C008A337A /* UIImage+YFResizing.h */,
+				EFF0E4DC1F03F25C008A337A /* UIImage+YFResizing.m */,
+				EFF0E4DD1F03F25C008A337A /* UIView+Extension.h */,
+				EFF0E4DE1F03F25C008A337A /* UIView+Extension.m */,
+			);
+			path = "Category+Extension ";
+			sourceTree = "<group>";
+		};
+		EFF0E4E61F03FB53008A337A /* SDLib_resource */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4E71F03FBA0008A337A /* MJExtension */,
+			);
+			path = SDLib_resource;
+			sourceTree = "<group>";
+		};
+		EFF0E4E71F03FBA0008A337A /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4E81F03FBA0008A337A /* LICENSE */,
+				EFF0E4E91F03FBA0008A337A /* MJExtension */,
+				EFF0E4FF1F03FBA0008A337A /* README.md */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		EFF0E4E91F03FBA0008A337A /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EFF0E4EA1F03FBA0008A337A /* MJExtension.h */,
+				EFF0E4EB1F03FBA0008A337A /* MJExtensionConst.h */,
+				EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */,
+				EFF0E4ED1F03FBA0008A337A /* MJFoundation.h */,
+				EFF0E4EE1F03FBA0008A337A /* MJFoundation.m */,
+				EFF0E4EF1F03FBA0008A337A /* MJProperty.h */,
+				EFF0E4F01F03FBA0008A337A /* MJProperty.m */,
+				EFF0E4F11F03FBA0008A337A /* MJPropertyKey.h */,
+				EFF0E4F21F03FBA0008A337A /* MJPropertyKey.m */,
+				EFF0E4F31F03FBA0008A337A /* MJPropertyType.h */,
+				EFF0E4F41F03FBA0008A337A /* MJPropertyType.m */,
+				EFF0E4F51F03FBA0008A337A /* NSObject+MJClass.h */,
+				EFF0E4F61F03FBA0008A337A /* NSObject+MJClass.m */,
+				EFF0E4F71F03FBA0008A337A /* NSObject+MJCoding.h */,
+				EFF0E4F81F03FBA0008A337A /* NSObject+MJCoding.m */,
+				EFF0E4F91F03FBA0008A337A /* NSObject+MJKeyValue.h */,
+				EFF0E4FA1F03FBA0008A337A /* NSObject+MJKeyValue.m */,
+				EFF0E4FB1F03FBA0008A337A /* NSObject+MJProperty.h */,
+				EFF0E4FC1F03FBA0008A337A /* NSObject+MJProperty.m */,
+				EFF0E4FD1F03FBA0008A337A /* NSString+MJExtension.h */,
+				EFF0E4FE1F03FBA0008A337A /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +567,7 @@
 			files = (
 				EF8A1FB51F02B19300E526B3 /* LaunchScreen.storyboard in Resources */,
 				EF8A1FB21F02B19300E526B3 /* Assets.xcassets in Resources */,
+				EFF0E5001F03FBA0008A337A /* LICENSE in Resources */,
 				EF8A1FB01F02B19300E526B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,9 +593,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF0E4E21F03F25C008A337A /* UIButton+buton_Text.m in Sources */,
+				EFF0E5011F03FBA0008A337A /* MJExtensionConst.m in Sources */,
+				EFF0E4C41F03E9E2008A337A /* SDChatDetailTableViewCell.m in Sources */,
+				EFF0E5081F03FBA0008A337A /* NSObject+MJKeyValue.m in Sources */,
+				EFF0E5071F03FBA0008A337A /* NSObject+MJCoding.m in Sources */,
+				EFF0E5041F03FBA0008A337A /* MJPropertyKey.m in Sources */,
+				EFF0E4CE1F03E9E2008A337A /* SDChatTableViewCell.m in Sources */,
+				EFF0E4C11F03E9E2008A337A /* SDChatAddFileKeyBoardView.m in Sources */,
+				EFF0E4E31F03F25C008A337A /* UIColor+UIColor_Hex.m in Sources */,
+				EFF0E4CD1F03E9E2008A337A /* SDChatTableView.m in Sources */,
+				EFF0E5021F03FBA0008A337A /* MJFoundation.m in Sources */,
+				EFF0E4E41F03F25C008A337A /* UIImage+YFResizing.m in Sources */,
+				EFF0E4B71F03E9E2008A337A /* SDChatMessageConst.m in Sources */,
+				EFF0E4C61F03E9E2008A337A /* SDFaceListView.m in Sources */,
+				EFF0E4E51F03F25C008A337A /* UIView+Extension.m in Sources */,
+				EFF0E4C01F03E9E2008A337A /* SDChatDetailViewController.m in Sources */,
+				EFF0E4CA1F03E9E2008A337A /* SDChatInputView.m in Sources */,
+				EFF0E4C51F03E9E2008A337A /* SDChatAddFacekeyBoardView.m in Sources */,
+				EFF0E4C71F03E9E2008A337A /* SDFaceToolBar.m in Sources */,
+				EFF0E4C21F03E9E2008A337A /* SDChatConnectionTableViewCell.m in Sources */,
+				EFF0E4B91F03E9E2008A337A /* SDChatDetailFrame.m in Sources */,
+				EFF0E4E11F03F25C008A337A /* UIBarButtonItem+Extension.m in Sources */,
 				EF8A1FAD1F02B19300E526B3 /* ViewController.m in Sources */,
+				EFF0E4C31F03E9E2008A337A /* SDChatDetailTableView.m in Sources */,
+				EFF0E4C81F03E9E2008A337A /* SDFaceView.m in Sources */,
+				EFF0E4E01F03F25C008A337A /* NSDictionary+ChinesePrint.m in Sources */,
+				EFF0E50A1F03FBA0008A337A /* NSString+MJExtension.m in Sources */,
+				EFF0E4BE1F03E9E2008A337A /* SDFaceArrTool.m in Sources */,
+				EFF0E4BD1F03E9E2008A337A /* NSString+Emoji.m in Sources */,
+				EFF0E5061F03FBA0008A337A /* NSObject+MJClass.m in Sources */,
+				EFF0E4BC1F03E9E2008A337A /* SDFaceModel.m in Sources */,
 				EF8A1FAA1F02B19300E526B3 /* AppDelegate.m in Sources */,
 				EF8A1FA71F02B19300E526B3 /* main.m in Sources */,
+				EFF0E4B61F03E9E2008A337A /* SDChatViewController.m in Sources */,
+				EFF0E5051F03FBA0008A337A /* MJPropertyType.m in Sources */,
+				EFF0E4BA1F03E9E2008A337A /* SDChatMessage.m in Sources */,
+				EFF0E5031F03FBA0008A337A /* MJProperty.m in Sources */,
+				EFF0E5091F03FBA0008A337A /* NSObject+MJProperty.m in Sources */,
+				EFF0E4C91F03E9E2008A337A /* SDFaceViewBtn.m in Sources */,
+				EFF0E4DF1F03F25C008A337A /* NSArray+NSLogLocale.m in Sources */,
+				EFF0E4BB1F03E9E2008A337A /* SDChat.m in Sources */,
+				EFF0E50B1F03FBA0008A337A /* README.md in Sources */,
+				EFF0E4B81F03E9E2008A337A /* SDChatDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +784,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDChat/SDPrefixHeader.pch";
 				INFOPLIST_FILE = SDChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDChat;
@@ -437,6 +797,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDChat/SDPrefixHeader.pch";
 				INFOPLIST_FILE = SDChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = slowdony.SDChat;
@@ -509,6 +871,7 @@
 				EF8A1FD11F02B19300E526B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF8A1FD21F02B19300E526B3 /* Build configuration list for PBXNativeTarget "SDChatTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +880,7 @@
 				EF8A1FD41F02B19300E526B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF8A1FD51F02B19300E526B3 /* Build configuration list for PBXNativeTarget "SDChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +889,7 @@
 				EF8A1FD71F02B19300E526B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
