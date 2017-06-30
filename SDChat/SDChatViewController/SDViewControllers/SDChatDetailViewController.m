@@ -367,6 +367,18 @@ UIScrollViewDelegate
 -(void)SDChatInputView:(SDChatInputView *)chatInputView sendTextMessage:(NSString *)textMessage{
    
 //    [self setChatNetWorkWith:textMessage];
+    int i =arc4random() %2;
+    
+    NSDictionary *dic =@{@"msg":textMessage,@"msgID":@"1",@"sender":[NSString stringWithFormat:@"%zd",i],@"sendTime":@"06-23",@"msgType":@"0"};
+    SDChatMessage *msg =[SDChatMessage chatMessageWithDic:dic];
+    SDChatDetail *chat =[SDChatDetail sd_chatWith:msg];
+    SDChatDetailFrame *chatFrame =[[SDChatDetailFrame alloc]init];
+    chatFrame.chat=chat;
+    
+    [self.dataArr addObject:chatFrame];
+    [self.chatTableView reloadData];
+    [self sd_scrollToBottomWithAnimated:YES];
+    
 
 }
 

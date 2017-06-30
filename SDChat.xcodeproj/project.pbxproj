@@ -15,6 +15,7 @@
 		EF8A1FB51F02B19300E526B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8A1FB31F02B19300E526B3 /* LaunchScreen.storyboard */; };
 		EF8A1FC01F02B19300E526B3 /* SDChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A1FBF1F02B19300E526B3 /* SDChatTests.m */; };
 		EF8A1FCB1F02B19300E526B3 /* SDChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A1FCA1F02B19300E526B3 /* SDChatUITests.m */; };
+		EFDCA5261F06A97C00398D8D /* sdChatFaceEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFDCA5251F06A97C00398D8D /* sdChatFaceEmoji.plist */; };
 		EFF0E4B61F03E9E2008A337A /* SDChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E47C1F03E9E2008A337A /* SDChatViewController.m */; };
 		EFF0E4B71F03E9E2008A337A /* SDChatMessageConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E47F1F03E9E2008A337A /* SDChatMessageConst.m */; };
 		EFF0E4B81F03E9E2008A337A /* SDChatDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4831F03E9E2008A337A /* SDChatDetail.m */; };
@@ -93,6 +94,7 @@
 		EF8A1FCA1F02B19300E526B3 /* SDChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDChatUITests.m; sourceTree = "<group>"; };
 		EF8A1FCC1F02B19300E526B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8A20351F02B34100E526B3 /* SDHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHeader.h; sourceTree = "<group>"; };
+		EFDCA5251F06A97C00398D8D /* sdChatFaceEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sdChatFaceEmoji.plist; sourceTree = "<group>"; };
 		EFF0E47B1F03E9E2008A337A /* SDChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatViewController.h; sourceTree = "<group>"; };
 		EFF0E47C1F03E9E2008A337A /* SDChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatViewController.m; sourceTree = "<group>"; };
 		EFF0E47E1F03E9E2008A337A /* SDChatMessageConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatMessageConst.h; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		EFF0E48E1F03E9E2008A337A /* SDTools */ = {
 			isa = PBXGroup;
 			children = (
+				EFDCA5251F06A97C00398D8D /* sdChatFaceEmoji.plist */,
 				EFF0E48F1F03E9E2008A337A /* NSString+Emoji.h */,
 				EFF0E4901F03E9E2008A337A /* NSString+Emoji.m */,
 				EFF0E4911F03E9E2008A337A /* SDFaceArrTool.h */,
@@ -569,6 +572,7 @@
 				EF8A1FB21F02B19300E526B3 /* Assets.xcassets in Resources */,
 				EFF0E5001F03FBA0008A337A /* LICENSE in Resources */,
 				EF8A1FB01F02B19300E526B3 /* Main.storyboard in Resources */,
+				EFDCA5261F06A97C00398D8D /* sdChatFaceEmoji.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
