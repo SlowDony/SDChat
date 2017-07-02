@@ -1,6 +1,6 @@
 //
 //  SDChatMessageConst.m
-//  miaohu
+//  SDChat
 //
 //  Created by Megatron Joker on 2017/6/3.
 //  Copyright © 2017年 SlowDony. All rights reserved.
@@ -19,3 +19,6 @@ NSString *const SDFaceDidDeleteNotification   =
 @"SDFaceDidDeleteNotification";
 NSString *const SDFaceDidSendNotification     =
 @"SDFaceDidSendNotification";
+
+//监听输入框的高度变化
+NSString *const SDInputViewTextContentSize =@"contentSize";

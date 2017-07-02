@@ -1,6 +1,6 @@
 //
 //  SDChatMessageConst.h
-//  miaohu
+//  SDChat
 //
 //  Created by Megatron Joker on 2017/6/3.
 //  Copyright © 2017年 SlowDony. All rights reserved.
@@ -18,3 +18,5 @@ extern NSString *const SDFaceDidSelectNotification;
 extern NSString *const SDFaceDidDeleteNotification;
 extern NSString *const SDFaceDidSendNotification;
 
+
+extern NSString *const SDInputViewTextContentSize;

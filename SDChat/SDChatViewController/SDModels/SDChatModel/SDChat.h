@@ -1,6 +1,6 @@
 //
 //  SDChat.h
-//  miaohu
+//  SDChat
 //
 //  Created by slowdony on 2017/6/20.
 //  Copyright © 2017年 SlowDony. All rights reserved.

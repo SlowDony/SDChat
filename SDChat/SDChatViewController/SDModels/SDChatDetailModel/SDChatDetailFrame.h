@@ -1,6 +1,6 @@
 //
 //  SDChatDetailFrame.h
-//  miaohu
+//  SDChat
 //
 //  Created by Megatron Joker on 2017/5/18.
 //  Copyright © 2017年 SlowDony. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  SDChatInputView.m
-//  miaohu
+//  SDChat
 //
 //  Created by Megatron Joker on 2017/5/15.
 //  Copyright © 2017年 SlowDony. All rights reserved.
@@ -10,8 +10,11 @@
 #import "SDFaceModel.h"
 
 #define inputViewHeight 50
+#define defaultTextInputHeight 35
 @interface SDChatInputView () <UITextViewDelegate>
 @property (nonatomic,strong)UIButton *faceBtn;
+@property (nonatomic,strong)UIButton *failBtn;
+@property (nonatomic,strong)UIView *bottomline;
 @end
 
 @implementation SDChatInputView
@@ -84,7 +87,7 @@
     
     
     UITextView *chatText =[[UITextView alloc]init];
-    chatText.frame =CGRectMake(10,(inputViewHeight-35)/2, SDDeviceWidth-101,35 );
+    chatText.frame =CGRectMake(10,(inputViewHeight-defaultTextInputHeight)/2, SDDeviceWidth-101,defaultTextInputHeight);
     chatText.delegate=self;
     chatText.backgroundColor = [UIColor whiteColor];
     chatText.textColor = fontBlackColor;
@@ -96,32 +99,72 @@
     chatText.layer.borderColor=borderCol.CGColor;
     chatText.layer.borderWidth=0.8;
     chatText.layer.masksToBounds=YES;
+    //观察输入框的高度变化(contentSize)
+    [chatText addObserver:self forKeyPath:SDInputViewTextContentSize options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     [self addSubview:chatText];
     
-    //
-    UIButton *sendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    sendBtn.frame = CGRectMake(SDDeviceWidth-80 ,(inputViewHeight-30)/2, 30, 30);
-//    [sendBtn setTitle:@"表情" forState:UIControlStateNormal];
-    [sendBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
-    [sendBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
-    [sendBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    self.faceBtn=sendBtn;
-    sendBtn.tag=1001;
-    [self addSubview: sendBtn];
+    //添加表情
+    UIButton *faceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    faceBtn.frame = CGRectMake(SDDeviceWidth-80 ,(inputViewHeight-30)/2, 30, 30);
+//    [faceBtn setTitle:@"表情" forState:UIControlStateNormal];
+    [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
+    [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
+    [faceBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    self.faceBtn=faceBtn;
+    faceBtn.tag=1001;
+    [self addSubview: faceBtn];
     
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(SDDeviceWidth-30-10,(inputViewHeight-30)/2,30, 30);
+    //添加图片
+    UIButton *failBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    failBtn.frame = CGRectMake(SDDeviceWidth-30-10,(inputViewHeight-30)/2,30, 30);
 
-    [btn setBackgroundImage:[UIImage imageNamed:@"chatAddFile"] forState:UIControlStateNormal];
-    [btn setBackgroundImage:[UIImage imageNamed:@"chatAddFile_Highlight"] forState:UIControlStateHighlighted];
-    btn.tag=1002;
-    [btn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview: btn];
+    [failBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile"] forState:UIControlStateNormal];
+    [failBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile_Highlight"] forState:UIControlStateHighlighted];
+    failBtn.tag=1002;
+    [failBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    self.failBtn =failBtn;
+    [self addSubview: failBtn];
     
     UIView *bottomline = [[UIView alloc] init];
     bottomline.frame = CGRectMake(0, inputViewHeight-1, SDDeviceWidth, 0.5);
     bottomline.backgroundColor = borderCol;
+    self.bottomline =bottomline;
     [self addSubview:bottomline];
+    
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    CGFloat oldHeight =[change[@"old"]CGSizeValue].height;
+    CGFloat newheight =[change[@"new"]CGSizeValue].height;
+    SDLog(@"------new------:%f",newheight);
+    SDLog(@"------old------:%f",oldHeight);
+    
+    if (oldHeight<=0||newheight<=0) return;
+    
+    if (newheight!=oldHeight) {
+        SDLog(@"高度变化");
+        if (newheight>100){
+            newheight=100;
+        }
+        
+        CGFloat inputHeight = newheight>defaultTextInputHeight ? newheight:defaultTextInputHeight;
+        [self chatTextViewHeightFit:inputHeight];
+    }
+    
+    
+    
+}
+
+-(void)chatTextViewHeightFit:(CGFloat ) height{
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.frame =CGRectMake(0,SDDeviceHeight-(inputViewHeight-defaultTextInputHeight+height), SDDeviceWidth, inputViewHeight-defaultTextInputHeight+height);
+        self.chatText.frame =CGRectMake(10,(self.frame.size.height-height)/2, SDDeviceWidth-101,height);
+        self.bottomline.frame =CGRectMake(0, self.frame.size.height-1, SDDeviceWidth, 0.5);
+        self.faceBtn.frame = CGRectMake(SDDeviceWidth-80 ,(self.frame.size.height-30-10), 30, 30);
+        self.failBtn.frame = CGRectMake(SDDeviceWidth-30-10,(self.frame.size.height-30-10),30, 30);
+    }];
+   
     
 }
 

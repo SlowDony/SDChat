@@ -1,6 +1,6 @@
 //
 //  SDChatTableViewCell.h
-//  miaohu
+//  SDChat
 //
 //  Created by Megatron Joker on 2017/5/15.
 //  Copyright © 2017年 SlowDony. All rights reserved.
