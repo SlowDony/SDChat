@@ -34,7 +34,7 @@
     if (self) {
         self.dataSource=self;
         self.delegate=self;
-        self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         
     }
     return self;

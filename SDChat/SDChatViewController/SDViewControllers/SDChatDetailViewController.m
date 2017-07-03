@@ -179,9 +179,9 @@ UIScrollViewDelegate
                         @{@"msg":@"哈哈",@"msgID":@"1",@"sender":@"0",@"sendTime":@"06-23",@"msgType":@"0"},
                         @{@"msg":@"就是不是搞死你大当家氨",@"msgID":@"2",@"sender":@"1",@"sendTime":@"02:20",@"msgType":@"3"},
                         @{@"msg":@"你在干啥就是不是搞死你大当家氨",@"msgID":@"3",@"sender":@"0",@"sendTime":@"02:30",@"msgType":@"0"},
-                        @{@"msg":@"不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨不告诉你就是不是搞死你大当家氨",@"msgID":@"4",@"sender":@"1",@"sendTime":@"02:40",@"msgType":@"0"},
+                        @{@"msg":@"简单的",@"msgID":@"4",@"sender":@"1",@"sendTime":@"02:40",@"msgType":@"0"},
                         @{@"msg":@"不告诉你不告诉你不告诉你不告诉你标题标题标题标题",@"msgID":@"4",@"sender":@"1",@"sendTime":@"02:40",@"msgType":@"0"},
-                        @{@"msg":@"不告诉你大手大脚二等奖饿哦我肯定破可怕大卡等奖饿哦我肯定破可怕大卡司",@"msgID":@"4",@"sender":@"0",@"sendTime":@"今天02:40",@"msgType":@"3"},
+                        @{@"msg":@"不告诉你大手大脚二等奖饿哦我肯定破可怕大卡等奖饿哦我肯定破可怕大卡司",@"msgID":@"4",@"sender":@"0",@"sendTime":@"今天02:40",@"msgType":@"0"},
                        ];
         NSMutableArray *emptyArr =[[NSMutableArray alloc]init];
         
@@ -307,27 +307,25 @@ UIScrollViewDelegate
  @param sender  添加文件按钮监听
  */
 -(void)SDChatInputViewAddFileClicked:(UIButton *)sender{
-    SDLog(@"添加图片");
-    
-    
-    self.changingKeyboard = YES;
-    if (self.chatInputView.chatText.inputView){
-        self.chatInputView.chatText.inputView=nil;
-        self.chatInputView.showFaceBtn=YES;
-    }else {
-        self.chatInputView.chatText.inputView=self.addFileView;
-        self.chatInputView.showFaceBtn=NO;
-        
-    }
-    
-    // 关闭键盘
-    [self.chatInputView.chatText resignFirstResponder];
-    self.changingKeyboard = NO;
-    
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.chatInputView.chatText becomeFirstResponder];
-        });
-
+//    SDLog(@"添加图片");
+//    self.changingKeyboard = YES;
+//    if (self.chatInputView.chatText.inputView){
+//        self.chatInputView.chatText.inputView=nil;
+//        self.chatInputView.showFaceBtn=YES;
+//    }else {
+//        self.chatInputView.chatText.inputView=self.addFileView;
+//        self.chatInputView.showFaceBtn=NO;
+//        
+//    }
+//    
+//    // 关闭键盘
+//    [self.chatInputView.chatText resignFirstResponder];
+//    self.changingKeyboard = NO;
+//    
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [self.chatInputView.chatText becomeFirstResponder];
+//        });
+//
 }
 
 
@@ -337,31 +335,30 @@ UIScrollViewDelegate
  @param sender 添加表情按钮监听
  */
 -(void)SDChatInputViewAddFaceClicked:(UIButton *)sender{
-    SDLog(@"添加表情");
+//    SDLog(@"添加表情");
 //    [self sd_scrollToBottom];
     
-    self.changingKeyboard = YES;
-    if (self.chatInputView.chatText.inputView){
-        self.chatInputView.chatText.inputView=nil;
-        self.chatInputView.showFaceBtn=YES;
-    }else {
-        self.chatInputView.chatText.inputView=self.addFaceView;
-        
-        self.chatInputView.showFaceBtn=NO;
-
-    }
-    
-    // 关闭键盘
-    [self.chatInputView.chatText resignFirstResponder];
-    self.changingKeyboard = NO;
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 打开键盘
-        [self.chatInputView.chatText becomeFirstResponder];
-
-           });
-    
-   
+//    self.changingKeyboard = YES;
+//    
+//    if (self.chatInputView.chatText.inputView){
+//        self.chatInputView.chatText.inputView=nil;
+//        self.chatInputView.showFaceBtn=YES;
+//    }else {
+//        self.chatInputView.chatText.inputView=self.addFaceView;
+//        
+//        self.chatInputView.showFaceBtn=NO;
+//
+//    }
+//    
+//    // 关闭键盘
+//    [self.chatInputView.chatText resignFirstResponder];
+//    self.changingKeyboard = NO;
+//    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 打开键盘
+//        [self.chatInputView.chatText becomeFirstResponder];
+//
+//     });
     
 }
 -(void)SDChatInputView:(SDChatInputView *)chatInputView sendTextMessage:(NSString *)textMessage{

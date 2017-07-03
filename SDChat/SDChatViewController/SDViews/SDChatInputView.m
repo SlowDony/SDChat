@@ -92,6 +92,8 @@
     chatText.backgroundColor = [UIColor whiteColor];
     chatText.textColor = fontBlackColor;
     chatText.returnKeyType=UIReturnKeySend;
+    chatText.enablesReturnKeyAutomatically = YES;
+
     chatText.textAlignment = NSTextAlignmentLeft;
     chatText.font = [UIFont systemFontOfSize:17];
     self.chatText=chatText;
@@ -108,7 +110,8 @@
     faceBtn.frame = CGRectMake(SDDeviceWidth-80 ,(inputViewHeight-30)/2, 30, 30);
 //    [faceBtn setTitle:@"表情" forState:UIControlStateNormal];
     [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
-    [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
+//    [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
+    [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateSelected];
     [faceBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
     self.faceBtn=faceBtn;
     faceBtn.tag=1001;
@@ -150,9 +153,6 @@
         CGFloat inputHeight = newheight>defaultTextInputHeight ? newheight:defaultTextInputHeight;
         [self chatTextViewHeightFit:inputHeight];
     }
-    
-    
-    
 }
 
 -(void)chatTextViewHeightFit:(CGFloat ) height{
@@ -170,15 +170,17 @@
 
 -(void)setShowFaceBtn:(BOOL)showFaceBtn{
     _showFaceBtn =showFaceBtn;
-    if (showFaceBtn){ //显示表情按钮
-        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
-        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
-    }else { //切换为键盘按钮
-        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateNormal];
-//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard_Highlight"] forState:UIControlStateHighlighted];
-        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard"] forState:UIControlStateHighlighted];
-    }
+//    if (showFaceBtn){ //显示表情按钮
+//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
+//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
+//    }else { //切换为键盘按钮
+//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateNormal];
+////        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard_Highlight"] forState:UIControlStateHighlighted];
+//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard"] forState:UIControlStateHighlighted];
+//    }
 }
+
+
 
 -(void)btnClicked:(UIButton *)sender{
     
@@ -186,10 +188,11 @@
     {
         [self.chatText resignFirstResponder];
     }
+    
     switch (sender.tag) {
         case 1001: //添加表情view
         {
-            
+            sender.selected = !sender.selected;
             if([self.sd_delegate respondsToSelector:@selector(SDChatInputViewAddFaceClicked:)]){
                 [self.sd_delegate SDChatInputViewAddFaceClicked:sender];
             }
