@@ -11,6 +11,7 @@
 
 
 #import "SDChatAddFacekeyBoardView.h" //添加表情
+#import "SDChatAddFileKeyBoardView.h"//添加文件view
 #define inputViewHeight 50
 #define defaultTextInputHeight 35
 #define keyBoardContainerDefaultHeight 275
@@ -25,6 +26,13 @@
 @property (nonatomic,strong)SDChatAddFacekeyBoardView *addFaceView;
 
 /**
+ /添加文件view
+ */
+@property (nonatomic,strong)SDChatAddFileKeyBoardView *addFileView;
+
+
+
+/**
  键盘容器(存放表情键盘和上传文件view)
  */
 @property (nonatomic,strong)UIView *keyBoardContainer ;
@@ -34,6 +42,8 @@
  输入框容器,(存放输入框,添加表情按钮和添加表情按钮)
  */
 @property (nonatomic,strong)UIView *inputViewContainer;
+
+
 
 @end
 
@@ -104,7 +114,9 @@
 -(UIView *)keyBoardContainer{
     if (!_keyBoardContainer) {
         _keyBoardContainer =[[UIView alloc]init];
+        _keyBoardContainer.frame =CGRectMake(0, inputViewHeight, SDDeviceWidth, keyBoardContainerDefaultHeight);
         [_keyBoardContainer addSubview:self.addFaceView];
+        [_keyBoardContainer addSubview:self.addFileView];
         
     }
     return _keyBoardContainer;
@@ -116,6 +128,8 @@
 -(UIView *)inputViewContainer{
     if (!_inputViewContainer){
         _inputViewContainer =[[UIView alloc]init];
+        _inputViewContainer.frame =CGRectMake(0,0,SDDeviceWidth, inputViewHeight);
+        
         UIView *line = [[UIView alloc] init];
         line.frame = CGRectMake(0, 0, SDDeviceWidth, 0.5);
         line.backgroundColor = borderCol;
@@ -145,6 +159,17 @@
         _addFaceView.height=225;
     }
     return _addFaceView;
+}
+
+//添加图片view
+-(SDChatAddFileKeyBoardView *)addFileView{
+    if (!_addFileView){
+        _addFileView =[[SDChatAddFileKeyBoardView alloc]init];
+        _addFileView.backgroundColor=bjColor;
+        _addFileView.width=SDDeviceWidth;
+        _addFileView.height=225;
+    }
+    return _addFileView;
 }
 
 -(UITextView *)chatText{
@@ -183,7 +208,7 @@
         [_faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
         [_faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
         //    [_faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateSelected];
-        [_faceBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_faceBtn  addTarget:self action:@selector(faceBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         
         _faceBtn.tag=1001;
       
@@ -203,7 +228,7 @@
         [_failBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile"] forState:UIControlStateNormal];
         [_failBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile_Highlight"] forState:UIControlStateHighlighted];
         _failBtn.tag=1002;
-        [_failBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_failBtn  addTarget:self action:@selector(failBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _failBtn;
 }
@@ -240,37 +265,56 @@
     
     [UIView animateWithDuration:0.3 animations:^{
         self.frame =CGRectMake(0,SDDeviceHeight-(inputViewHeight-defaultTextInputHeight+height), SDDeviceWidth, inputViewHeight-defaultTextInputHeight+height);
+        self.inputViewContainer.frame =CGRectMake(0, 0, SDDeviceWidth, self.frame.size.height);
         self.chatText.frame =CGRectMake(10,(self.frame.size.height-height)/2, SDDeviceWidth-101,height);
         self.bottomline.frame =CGRectMake(0, self.frame.size.height-1, SDDeviceWidth, 0.5);
         self.faceBtn.frame = CGRectMake(SDDeviceWidth-80 ,(self.frame.size.height-30-10), 30, 30);
         self.failBtn.frame = CGRectMake(SDDeviceWidth-30-10,(self.frame.size.height-30-10),30, 30);
     }];
-   
-    
 }
 
 
 
-
-
--(void)btnClicked:(UIButton *)sender{
+-(void)failBtnClicked:(UIButton *)failBtn{
     
-//    if ([self.chatText isFirstResponder])
-//    {
-//        [self.chatText resignFirstResponder];
-//    }
+    failBtn.selected = !failBtn.selected;
+    self.faceBtn.selected=NO;
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
     
-    switch (sender.tag) {
-        case 1001: //添加表情view
-        {
-            sender.selected = !sender.selected;
-            if (!sender.selected) //键盘
+    if (failBtn.selected) //键盘
+    {
+        
+        [self.chatText resignFirstResponder];
+        //                [self customKeyboardMove:SDDeviceHeight-CGRectGetHeight(self.frame)];
+        [self.keyBoardContainer bringSubviewToFront:self.addFileView];
+        [self customKeyboardMove:keyBoardContainerDefaultHeight];
+        
+    }else//添加文件
+    {
+        
+        [self.chatText becomeFirstResponder];
+        
+    }
+    
+
+}
+
+-(void)faceBtnClicked:(UIButton *)faceBtn{
+    
+
+    
+   
+            faceBtn.selected = !faceBtn.selected ;
+            self.failBtn.selected=NO;
+            if (!faceBtn.selected) //键盘
             {
                 [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
                 [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
                
                 [self.chatText becomeFirstResponder];
-                self.chatText.inputView =self.addFaceView;
+            
+                
 
                 
             }else//表情
@@ -280,7 +324,9 @@
                 [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard"] forState:UIControlStateHighlighted];
                
                 [self.chatText resignFirstResponder];
-//                 self.chatText.inputView =nil;
+//                [self customKeyboardMove:SDDeviceHeight-CGRectGetHeight(self.frame)];
+                [self.keyBoardContainer bringSubviewToFront:self.addFaceView];
+                [self customKeyboardMove:keyBoardContainerDefaultHeight];
                 
             }
             
@@ -288,23 +334,18 @@
             
             
             
-            if([self.sd_delegate respondsToSelector:@selector(SDChatInputViewAddFaceClicked:)]){
-                [self.sd_delegate SDChatInputViewAddFaceClicked:sender];
-            }
-        }
-            break;
-        case 1002: //添加文件
-        {
-          
-            if([self.sd_delegate respondsToSelector:@selector(SDChatInputViewAddFileClicked:)]){
-                [self.sd_delegate SDChatInputViewAddFileClicked:sender];
-            }
-        }
-        default:
-            break;
-    }
+    
+    
 }
 
+
+#pragma mark - 自定义键盘位移变化
+- (void)customKeyboardMove:(CGFloat)customKbY
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        self.frame = CGRectMake(0, customKbY, SDDeviceWidth, CGRectGetHeight(self.frame));
+    }];
+}
 - (void) textViewDidChange:(UITextView *)textView
 {
     //    CGFloat height = [textView sizeThatFits:CGSizeMake(self.textView.width, MAXFLOAT)].height;

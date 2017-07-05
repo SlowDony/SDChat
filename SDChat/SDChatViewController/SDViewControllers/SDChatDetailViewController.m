@@ -18,7 +18,7 @@
 
 /* 聊天内容View */
 #import "SDChatInputView.h" //输入view
-#import "SDChatAddFileKeyBoardView.h"//添加文件view
+
 
 #import "SDChatDetailTableView.h" //列表
 
@@ -43,10 +43,7 @@ UIScrollViewDelegate
 @property (nonatomic,strong)NSMutableArray *dataArr; //消息数据源
 @property (nonatomic,strong)SDChatDetailTableView *chatTableView;
 
-/**
- /添加文件view
- */
-@property (nonatomic,strong)SDChatAddFileKeyBoardView *addFileView;
+
 
 
 
@@ -236,18 +233,7 @@ UIScrollViewDelegate
     }
     return _chatInputView;
 }
-//添加图片view
--(SDChatAddFileKeyBoardView *)addFileView{
-    if (!_addFileView){
-        _addFileView =[[SDChatAddFileKeyBoardView alloc]init];
-        _addFileView.backgroundColor=bjColor;
-        _addFileView.width=SDDeviceWidth;
-        _addFileView.height=225;
-//        _addFileView.frame =kAddFileViewOriFrame;
-//        [[UIApplication sharedApplication].keyWindow addSubview:_addFileView];
-    }
-    return _addFileView;
-}
+
 
 
 
