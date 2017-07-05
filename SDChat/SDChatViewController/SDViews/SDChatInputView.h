@@ -41,10 +41,7 @@
 
 @property (nonatomic,weak) id<SDChatInputViewDelegate>sd_delegate;//
 
-/**
- 是否显示表情按钮
- */
-@property (nonatomic,assign,getter=isShowFaceBtn)BOOL showFaceBtn;
+
 
 
 

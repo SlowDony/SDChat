@@ -54,6 +54,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([self.sd_delegate respondsToSelector:@selector(SDChatTableView:didSelectRowAtIndexPath:)]) {
         [self.sd_delegate SDChatTableView:self didSelectRowAtIndexPath:indexPath];
     }

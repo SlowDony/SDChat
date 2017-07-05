@@ -19,7 +19,7 @@
 /* 聊天内容View */
 #import "SDChatInputView.h" //输入view
 #import "SDChatAddFileKeyBoardView.h"//添加文件view
-#import "SDChatAddFacekeyBoardView.h" //添加表情View
+
 #import "SDChatDetailTableView.h" //列表
 
 
@@ -48,10 +48,7 @@ UIScrollViewDelegate
  */
 @property (nonatomic,strong)SDChatAddFileKeyBoardView *addFileView;
 
-/**
- 添加表情view
- */
-@property (nonatomic,strong)SDChatAddFacekeyBoardView *addFaceView;
+
 
 /**
  背景view
@@ -252,16 +249,7 @@ UIScrollViewDelegate
     return _addFileView;
 }
 
-//添加表情view
--(SDChatAddFacekeyBoardView *)addFaceView{
-    if (!_addFaceView){
-        _addFaceView =[SDChatAddFacekeyBoardView faceKeyBoard];
-//        _addFaceView.backgroundColor =[UIColor redColor];
-        _addFaceView.width =SDDeviceWidth;
-        _addFaceView.height=225;
-    }
-    return _addFaceView;
-}
+
 
 //1.连接服务器(IP+port.ip+端口号)
 //2.监听连接服务器是否成功
@@ -307,7 +295,7 @@ UIScrollViewDelegate
  @param sender  添加文件按钮监听
  */
 -(void)SDChatInputViewAddFileClicked:(UIButton *)sender{
-//    SDLog(@"添加图片");
+    SDLog(@"添加图片");
 //    self.changingKeyboard = YES;
 //    if (self.chatInputView.chatText.inputView){
 //        self.chatInputView.chatText.inputView=nil;
@@ -349,7 +337,7 @@ UIScrollViewDelegate
 //        self.chatInputView.showFaceBtn=NO;
 //
 //    }
-//    
+//
 //    // 关闭键盘
 //    [self.chatInputView.chatText resignFirstResponder];
 //    self.changingKeyboard = NO;

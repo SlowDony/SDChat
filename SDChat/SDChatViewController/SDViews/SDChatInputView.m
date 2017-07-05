@@ -9,12 +9,32 @@
 #import "SDChatInputView.h"
 #import "SDFaceModel.h"
 
+
+#import "SDChatAddFacekeyBoardView.h" //添加表情
 #define inputViewHeight 50
 #define defaultTextInputHeight 35
+#define keyBoardContainerDefaultHeight 275
 @interface SDChatInputView () <UITextViewDelegate>
 @property (nonatomic,strong)UIButton *faceBtn;
 @property (nonatomic,strong)UIButton *failBtn;
 @property (nonatomic,strong)UIView *bottomline;
+
+/**
+ 添加表情view
+ */
+@property (nonatomic,strong)SDChatAddFacekeyBoardView *addFaceView;
+
+/**
+ 键盘容器(存放表情键盘和上传文件view)
+ */
+@property (nonatomic,strong)UIView *keyBoardContainer ;
+
+
+/**
+ 输入框容器,(存放输入框,添加表情按钮和添加表情按钮)
+ */
+@property (nonatomic,strong)UIView *inputViewContainer;
+
 @end
 
 @implementation SDChatInputView
@@ -30,12 +50,14 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        SDLog("retain count = %ld\n",CFGetRetainCount((__bridge CFTypeRef)(self)));
+//        SDLog("retain count = %ld\n",CFGetRetainCount((__bridge CFTypeRef)(self)));
+        
         [self setUI];
         [self addNotification];
     }
     return self;
 }
+
 
 /**
  添加通知(监听选择表情,删除表情,发送表情)
@@ -76,63 +98,122 @@
     [self.chatText deleteBackward];
 }
 
+/**
+ 表情容器
+ */
+-(UIView *)keyBoardContainer{
+    if (!_keyBoardContainer) {
+        _keyBoardContainer =[[UIView alloc]init];
+        [_keyBoardContainer addSubview:self.addFaceView];
+        
+    }
+    return _keyBoardContainer;
+}
+
+/**
+ 输入框容器
+ */
+-(UIView *)inputViewContainer{
+    if (!_inputViewContainer){
+        _inputViewContainer =[[UIView alloc]init];
+        UIView *line = [[UIView alloc] init];
+        line.frame = CGRectMake(0, 0, SDDeviceWidth, 0.5);
+        line.backgroundColor = borderCol;
+        [_inputViewContainer addSubview:line];
+        [_inputViewContainer addSubview:self.chatText];
+        [_inputViewContainer addSubview:self.faceBtn];
+        [_inputViewContainer addSubview:self.failBtn];
+        //添加图片
+        UIView *bottomline = [[UIView alloc] init];
+        bottomline.frame = CGRectMake(0, inputViewHeight-1, SDDeviceWidth, 0.5);
+        bottomline.backgroundColor = borderCol;
+        self.bottomline =bottomline;
+        [_inputViewContainer addSubview:bottomline];
+        
+    }
+    return _inputViewContainer;
+}
+/**
+ 添加表情view
+ */
+
+-(SDChatAddFacekeyBoardView *)addFaceView{
+    if (!_addFaceView){
+        _addFaceView =[SDChatAddFacekeyBoardView faceKeyBoard];
+        //        _addFaceView.backgroundColor =[UIColor redColor];
+        _addFaceView.width =SDDeviceWidth;
+        _addFaceView.height=225;
+    }
+    return _addFaceView;
+}
+
+-(UITextView *)chatText{
+    if (!_chatText) {
+        _chatText =[[UITextView alloc]init];
+        _chatText.frame =CGRectMake(10,(inputViewHeight-defaultTextInputHeight)/2, SDDeviceWidth-101,defaultTextInputHeight);
+        _chatText.delegate=self;
+        _chatText.backgroundColor = [UIColor whiteColor];
+        _chatText.textColor = fontBlackColor;
+        _chatText.returnKeyType=UIReturnKeySend;
+        _chatText.enablesReturnKeyAutomatically = YES;
+        
+        _chatText.textAlignment = NSTextAlignmentLeft;
+        _chatText.font = [UIFont systemFontOfSize:17];
+        
+        _chatText.layer.cornerRadius=4;
+        _chatText.layer.borderColor=borderCol.CGColor;
+        _chatText.layer.borderWidth=0.8;
+        _chatText.layer.masksToBounds=YES;
+        //观察输入框的高度变化(contentSize)
+        [_chatText addObserver:self forKeyPath:SDInputViewTextContentSize options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+        
+
+    }
+    return _chatText;
+}
+
+/**
+ 添加表情
+ */
+-(UIButton *)faceBtn{
+    if(!_faceBtn){
+        
+        _faceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _faceBtn.frame = CGRectMake(SDDeviceWidth-80 ,(inputViewHeight-30)/2, 30, 30);
+        [_faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
+        [_faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
+        //    [_faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateSelected];
+        [_faceBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        _faceBtn.tag=1001;
+      
+    }
+    return _faceBtn;
+}
+
+
+/**
+ 添加图片.等文件
+ */
+-(UIButton *)failBtn{
+    if (!_failBtn){
+        _failBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _failBtn.frame = CGRectMake(SDDeviceWidth-30-10,(inputViewHeight-30)/2,30, 30);
+        
+        [_failBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile"] forState:UIControlStateNormal];
+        [_failBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile_Highlight"] forState:UIControlStateHighlighted];
+        _failBtn.tag=1002;
+        [_failBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _failBtn;
+}
 -(void)setUI{
    
     self.backgroundColor=bjColor;
-    
-    UIView *line = [[UIView alloc] init];
-    line.frame = CGRectMake(0, 0, SDDeviceWidth, 0.5);
-    line.backgroundColor = borderCol;
-    [self addSubview:line];
-    
-    
-    UITextView *chatText =[[UITextView alloc]init];
-    chatText.frame =CGRectMake(10,(inputViewHeight-defaultTextInputHeight)/2, SDDeviceWidth-101,defaultTextInputHeight);
-    chatText.delegate=self;
-    chatText.backgroundColor = [UIColor whiteColor];
-    chatText.textColor = fontBlackColor;
-    chatText.returnKeyType=UIReturnKeySend;
-    chatText.enablesReturnKeyAutomatically = YES;
-
-    chatText.textAlignment = NSTextAlignmentLeft;
-    chatText.font = [UIFont systemFontOfSize:17];
-    self.chatText=chatText;
-    chatText.layer.cornerRadius=4;
-    chatText.layer.borderColor=borderCol.CGColor;
-    chatText.layer.borderWidth=0.8;
-    chatText.layer.masksToBounds=YES;
-    //观察输入框的高度变化(contentSize)
-    [chatText addObserver:self forKeyPath:SDInputViewTextContentSize options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
-    [self addSubview:chatText];
-    
-    //添加表情
-    UIButton *faceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    faceBtn.frame = CGRectMake(SDDeviceWidth-80 ,(inputViewHeight-30)/2, 30, 30);
-//    [faceBtn setTitle:@"表情" forState:UIControlStateNormal];
-    [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
-//    [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
-    [faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateSelected];
-    [faceBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    self.faceBtn=faceBtn;
-    faceBtn.tag=1001;
-    [self addSubview: faceBtn];
-    
-    //添加图片
-    UIButton *failBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    failBtn.frame = CGRectMake(SDDeviceWidth-30-10,(inputViewHeight-30)/2,30, 30);
-
-    [failBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile"] forState:UIControlStateNormal];
-    [failBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile_Highlight"] forState:UIControlStateHighlighted];
-    failBtn.tag=1002;
-    [failBtn  addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    self.failBtn =failBtn;
-    [self addSubview: failBtn];
-    
-    UIView *bottomline = [[UIView alloc] init];
-    bottomline.frame = CGRectMake(0, inputViewHeight-1, SDDeviceWidth, 0.5);
-    bottomline.backgroundColor = borderCol;
-    self.bottomline =bottomline;
-    [self addSubview:bottomline];
+//  输入框
+    [self addSubview:self.inputViewContainer];
+//   表情键盘
+    [self addSubview:self.keyBoardContainer];
     
 }
 
@@ -168,31 +249,45 @@
     
 }
 
--(void)setShowFaceBtn:(BOOL)showFaceBtn{
-    _showFaceBtn =showFaceBtn;
-//    if (showFaceBtn){ //显示表情按钮
-//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
-//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
-//    }else { //切换为键盘按钮
-//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateNormal];
-////        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard_Highlight"] forState:UIControlStateHighlighted];
-//        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard"] forState:UIControlStateHighlighted];
-//    }
-}
+
 
 
 
 -(void)btnClicked:(UIButton *)sender{
     
-    if ([self.chatText isFirstResponder])
-    {
-        [self.chatText resignFirstResponder];
-    }
+//    if ([self.chatText isFirstResponder])
+//    {
+//        [self.chatText resignFirstResponder];
+//    }
     
     switch (sender.tag) {
         case 1001: //添加表情view
         {
             sender.selected = !sender.selected;
+            if (!sender.selected) //键盘
+            {
+                [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
+                [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
+               
+                [self.chatText becomeFirstResponder];
+                self.chatText.inputView =self.addFaceView;
+
+                
+            }else//表情
+            {
+                [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateNormal];
+                //        [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFile_Highlight"] forState:UIControlStateHighlighted];
+                [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard"] forState:UIControlStateHighlighted];
+               
+                [self.chatText resignFirstResponder];
+//                 self.chatText.inputView =nil;
+                
+            }
+            
+            
+            
+            
+            
             if([self.sd_delegate respondsToSelector:@selector(SDChatInputViewAddFaceClicked:)]){
                 [self.sd_delegate SDChatInputViewAddFaceClicked:sender];
             }
