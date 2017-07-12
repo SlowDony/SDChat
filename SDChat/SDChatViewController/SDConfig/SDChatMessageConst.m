@@ -22,3 +22,6 @@ NSString *const SDFaceDidSendNotification     =
 
 //监听输入框的高度变化
 NSString *const SDInputViewTextContentSize =@"contentSize";
+
+//键盘失去第一响应者
+NSString *const SDChatKeyboardResign = @"ChatKeyboardShouldResignFirstResponder";

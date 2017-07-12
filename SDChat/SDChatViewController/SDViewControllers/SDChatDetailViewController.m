@@ -25,7 +25,7 @@
 
 
 
-#define kInputViewHeight 50
+#define kInputViewHeight 273
 
 #define kBjViewOriFrame CGRectMake(0, 0, SDDeviceWidth, SDDeviceHeight);
 
@@ -88,6 +88,12 @@ UIScrollViewDelegate
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    //系统键盘谈起通知
+    [[NSNotificationCenter defaultCenter] addObserver:self.chatInputView selector:@selector(systemKeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    
+    //自定义键盘,系统键盘
+    [[NSNotificationCenter defaultCenter] addObserver:self.chatInputView selector:@selector(keyboardResignFirstResponder:) name:SDChatKeyboardResign object:nil];
+    
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -95,7 +101,15 @@ UIScrollViewDelegate
     
 }
 
+-(void)systemKeyboardWillShow:(NSNotification *)notification{
+    
+    SDLog(@"notification:%@",notification.userInfo);
 
+    
+}
+//-(void)keyboardResignFirstResponder:(NSNotification *)notification{
+//
+//}
 
 
 
@@ -216,7 +230,7 @@ UIScrollViewDelegate
 
 -(SDChatDetailTableView *)chatTableView{
     if(!_chatTableView){
-        _chatTableView = [[SDChatDetailTableView alloc] initWithFrame:CGRectMake(0, 0, SDDeviceWidth, SDDeviceHeight-kInputViewHeight) style:UITableViewStylePlain];
+        _chatTableView = [[SDChatDetailTableView alloc] initWithFrame:CGRectMake(0,0, SDDeviceWidth, SDDeviceHeight-50) style:UITableViewStylePlain];
         
         _chatTableView.sdLongDelegate=self;
         _chatTableView.tableHeaderView = self.headView;
@@ -226,16 +240,12 @@ UIScrollViewDelegate
 // 输入view
 -(SDChatInputView *)chatInputView{
     if (!_chatInputView){
-        _chatInputView =[[SDChatInputView alloc]initWithFrame:CGRectMake(0,SDDeviceHeight-kInputViewHeight, SDDeviceWidth, kInputViewHeight)];
-        
+        _chatInputView =[[SDChatInputView alloc]initWithFrame:CGRectMake(0,SDDeviceHeight-50, SDDeviceWidth, kInputViewHeight)];
+        _chatInputView.backgroundColor=[UIColor whiteColor];
         _chatInputView.sd_delegate=self;
-        
     }
     return _chatInputView;
 }
-
-
-
 
 //1.连接服务器(IP+port.ip+端口号)
 //2.监听连接服务器是否成功
@@ -248,14 +258,12 @@ UIScrollViewDelegate
     self.chatTableView.dataArray =self.dataArr;
     [self.chatTableView reloadData];
     [self.bjView addSubview:self.chatInputView];
-
-    SDLog(@"self.bjview.subie:%@",self.bjView.subviews);
-//    [self.chatInputView.chatTextFiled becomeFirstResponder];
-    //监听键盘弹出
-    [self sd_observerKeyboardFrameChange];
-//    SDLog(@"addFileViewFrame:%@",NSStringFromCGRect(self.addFileView.frame));
-//    SDLog(@"self.view.Frame:%@",NSStringFromCGRect(self.view.frame));
     
+    SDLog(@"self.view :%@",NSStringFromCGRect(self.bjView.frame));
+     SDLog(@"chatInputView :%@",NSStringFromCGRect(self.chatInputView.frame));
+    SDLog(@"chatTableView :%@",NSStringFromCGRect(self.chatTableView.frame));
+    
+    [self sd_scrollToBottomWithAnimated:YES];
 }
 
 
@@ -361,48 +369,6 @@ UIScrollViewDelegate
 
 
 #pragma mark - 监听键盘弹出方法
-- (void)sd_observerKeyboardFrameChange
-{
-    
-    [[NSNotificationCenter defaultCenter] addObserverForName: UIKeyboardWillChangeFrameNotification
-                                                      object:nil
-                                                       queue: [NSOperationQueue mainQueue]
-                                                  usingBlock:^(NSNotification * _Nonnull note) {
-                                                      //
-                                                      //                                                      NSLog(@"%s, line = %d,note =%@", __FUNCTION__, __LINE__, note);
-                                                      /**
-                                                       note.userInfo
-                                                       UIKeyboardAnimationCurveUserInfoKey = 7;
-                                                       UIKeyboardAnimationDurationUserInfoKey = "0.25";
-                                                       UIKeyboardBoundsUserInfoKey = "NSRect: {{0, 0}, {375, 258}}";
-                                                       UIKeyboardCenterBeginUserInfoKey = "NSPoint: {187.5, 796}";
-                                                       UIKeyboardCenterEndUserInfoKey = "NSPoint: {187.5, 538}";
-                                                       UIKeyboardFrameBeginUserInfoKey = "NSRect: {{0, 667}, {375, 258}}";
-                                                       UIKeyboardFrameEndUserInfoKey = "NSRect: {{0, 409}, {375, 258}}";
-                                                       UIKeyboardIsLocalUserInfoKey = 1;
-                                                       self.view 可以根据 end.oriY来进行 布局改变
-                                                       */
-                                                      
-                                                      [self sd_scrollToBottomWithAnimated:YES];
-//                                                      SDLog(@"键盘之前bjView:%@",NSStringFromCGRect(self.bjView.frame));
-//                                                      SDLog(@"键盘之前View:%@",NSStringFromCGRect(self.view.frame));
-                                                      CGFloat endY = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
-                                                      CGFloat duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
-                                                      
-                                                      
-                                                      CGRect bjViewFrame =self.bjView.frame;
-                                                      bjViewFrame.origin.y =endY - bjViewFrame.size.height;
-                                                      self.bjView.frame=bjViewFrame;
-                                                      
-                                                      SDLog(@"键盘之后View:%@",NSStringFromCGRect(self.view.frame));
-                                                      
-                                                      [UIView animateWithDuration:duration animations:^{
-                                                          [self.view setNeedsLayout];
-                                                      }];
-                                                      
-                                                      
-                                                  }];
-}
 - (void)sd_scrollToBottomWithAnimated:(BOOL)animate
 {
     if (!self.dataArr.count) return;
