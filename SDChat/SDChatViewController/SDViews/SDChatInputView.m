@@ -12,10 +12,17 @@
 
 #import "SDChatAddFacekeyBoardView.h" //添加表情
 #import "SDChatAddFileKeyBoardView.h"//添加文件view
-#define inputViewHeight 50
+
 #define defaultTextInputHeight 35
 #define keyBoardContainerDefaultHeight 275
+static CGFloat keyBoardHeight = 0;
+static CGFloat inputViewHeight =50;
 @interface SDChatInputView () <UITextViewDelegate>
+
+//记录系统键盘和自定义键盘高度
+
+
+
 @property (nonatomic,strong)UIButton *faceBtn;
 @property (nonatomic,strong)UIButton *failBtn;
 @property (nonatomic,strong)UIView *bottomline;
@@ -82,8 +89,11 @@
 }
 -(void)dealloc{
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SDFaceDidSendNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SDFaceDidDeleteNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:SDFaceDidSendNotification object:nil];
+     [self.chatText removeObserver:self forKeyPath:SDInputViewTextContentSize];
+
 }
 
 /**
@@ -100,6 +110,8 @@
    
     
 }
+
+
 /**
  删除表情通知
  
@@ -108,19 +120,49 @@
     [self.chatText deleteBackward];
 }
 
+
+/**
+ 系统键盘弹起通知
+
+ */
+-(void)systemKeyboardWillShow:(NSNotification *)notification{
+    
+    //获取键盘的高度
+    CGFloat systemKeyBoardHeight =[notification.userInfo[@"UIKeyboardBoundsUserInfoKey"]CGRectValue].size.height;
+    //记录系统键盘的高度
+    keyBoardHeight =systemKeyBoardHeight;
+    //将自定义键盘位移
+    [self customKeyboardMove:SDDeviceHeight -systemKeyBoardHeight-inputViewHeight];
+    
+}
+
+
+/**
+ 键盘降落
+
+ @param notification 通知
+ */
+-(void)keyboardResignFirstResponder:(NSNotification *)notification{
+    [self.chatText resignFirstResponder];
+    //按钮初始化刷新
+    //    [self reloadSwitchButtons];
+    [self customKeyboardMove:SDDeviceHeight - inputViewHeight];
+
+}
 /**
  表情容器
  */
 -(UIView *)keyBoardContainer{
     if (!_keyBoardContainer) {
         _keyBoardContainer =[[UIView alloc]init];
-        _keyBoardContainer.frame =CGRectMake(0, inputViewHeight, SDDeviceWidth, keyBoardContainerDefaultHeight);
+        _keyBoardContainer.frame =CGRectMake(0, inputViewHeight, SDDeviceWidth, keyBoardContainerDefaultHeight-inputViewHeight);
         [_keyBoardContainer addSubview:self.addFaceView];
         [_keyBoardContainer addSubview:self.addFileView];
         
     }
     return _keyBoardContainer;
 }
+
 
 /**
  输入框容器
@@ -172,6 +214,7 @@
     return _addFileView;
 }
 
+//聊天输入框
 -(UITextView *)chatText{
     if (!_chatText) {
         _chatText =[[UITextView alloc]init];
@@ -190,7 +233,7 @@
         _chatText.layer.borderWidth=0.8;
         _chatText.layer.masksToBounds=YES;
         //观察输入框的高度变化(contentSize)
-        [_chatText addObserver:self forKeyPath:SDInputViewTextContentSize options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+       [_chatText addObserver:self forKeyPath:SDInputViewTextContentSize options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
         
 
     }
@@ -242,16 +285,18 @@
     
 }
 
+
+/**
+ 观察输入框的高度变化
+ */
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     CGFloat oldHeight =[change[@"old"]CGSizeValue].height;
     CGFloat newheight =[change[@"new"]CGSizeValue].height;
-    SDLog(@"------new------:%f",newheight);
-    SDLog(@"------old------:%f",oldHeight);
     
     if (oldHeight<=0||newheight<=0) return;
     
     if (newheight!=oldHeight) {
-        SDLog(@"高度变化");
+
         if (newheight>100){
             newheight=100;
         }
@@ -264,17 +309,27 @@
 -(void)chatTextViewHeightFit:(CGFloat ) height{
     
     [UIView animateWithDuration:0.3 animations:^{
-        self.frame =CGRectMake(0,SDDeviceHeight-(inputViewHeight-defaultTextInputHeight+height), SDDeviceWidth, inputViewHeight-defaultTextInputHeight+height);
+        
+        self.frame =CGRectMake(0,SDDeviceHeight-(keyBoardHeight-defaultTextInputHeight+height), SDDeviceWidth, keyBoardContainerDefaultHeight-defaultTextInputHeight+height);
+        SDLog(@" self.frame:%@",NSStringFromCGRect(self.frame));
         self.inputViewContainer.frame =CGRectMake(0, 0, SDDeviceWidth, self.frame.size.height);
+        
+        
         self.chatText.frame =CGRectMake(10,(self.frame.size.height-height)/2, SDDeviceWidth-101,height);
         self.bottomline.frame =CGRectMake(0, self.frame.size.height-1, SDDeviceWidth, 0.5);
         self.faceBtn.frame = CGRectMake(SDDeviceWidth-80 ,(self.frame.size.height-30-10), 30, 30);
         self.failBtn.frame = CGRectMake(SDDeviceWidth-30-10,(self.frame.size.height-30-10),30, 30);
+        
+        
     }];
 }
 
 
+/**
+ 图片按钮点击
 
+ @param failBtn 添加图片按钮
+ */
 -(void)failBtnClicked:(UIButton *)failBtn{
     
     failBtn.selected = !failBtn.selected;
@@ -286,9 +341,9 @@
     {
         
         [self.chatText resignFirstResponder];
-        //                [self customKeyboardMove:SDDeviceHeight-CGRectGetHeight(self.frame)];
         [self.keyBoardContainer bringSubviewToFront:self.addFileView];
-        [self customKeyboardMove:keyBoardContainerDefaultHeight];
+        [self customKeyboardMove:SDDeviceHeight-CGRectGetHeight(self.frame)];
+
         
     }else//添加文件
     {
@@ -300,11 +355,14 @@
 
 }
 
+/**
+ 表情按钮点击
+
+ @param faceBtn 表情按钮
+ */
 -(void)faceBtnClicked:(UIButton *)faceBtn{
     
 
-    
-   
             faceBtn.selected = !faceBtn.selected ;
             self.failBtn.selected=NO;
             if (!faceBtn.selected) //键盘
@@ -313,10 +371,7 @@
                 [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
                
                 [self.chatText becomeFirstResponder];
-            
-                
-
-                
+   
             }else//表情
             {
                 [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddKeyboard"] forState:UIControlStateNormal];
@@ -324,18 +379,13 @@
                 [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddkeyboard"] forState:UIControlStateHighlighted];
                
                 [self.chatText resignFirstResponder];
-//                [self customKeyboardMove:SDDeviceHeight-CGRectGetHeight(self.frame)];
+             
                 [self.keyBoardContainer bringSubviewToFront:self.addFaceView];
-                [self customKeyboardMove:keyBoardContainerDefaultHeight];
+                [self customKeyboardMove:SDDeviceHeight-CGRectGetHeight(self.frame)];
+
                 
             }
-            
-            
-            
-            
-            
-    
-    
+ 
 }
 
 
@@ -344,8 +394,11 @@
 {
     [UIView animateWithDuration:0.25 animations:^{
         self.frame = CGRectMake(0, customKbY, SDDeviceWidth, CGRectGetHeight(self.frame));
+        SDLog(@"self.frame:%@",NSStringFromCGRect(self.frame));
     }];
 }
+
+#pragma mark - textView代理
 - (void) textViewDidChange:(UITextView *)textView
 {
     //    CGFloat height = [textView sizeThatFits:CGSizeMake(self.textView.width, MAXFLOAT)].height;

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 SlowDony. All rights reserved.
 //
 /*
-    socket的客户端编程
+ socket的客户端编程
  1.连接到服务器(ip+port)
  2.监听连接服务器是否成功
  3.如果连接成功,就可以发送消息给服务器

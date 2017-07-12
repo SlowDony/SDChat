@@ -84,6 +84,7 @@
         faceView.x = i * faceW;
     }
 }
+
 -(void)setFaceArr:(NSMutableArray *)faceArr{
     _faceArr =faceArr;
     //设置总页数

@@ -18,5 +18,8 @@ extern NSString *const SDFaceDidSelectNotification;
 extern NSString *const SDFaceDidDeleteNotification;
 extern NSString *const SDFaceDidSendNotification;
 
-
+//监听输入框的高度变化
 extern NSString *const SDInputViewTextContentSize;
+
+//键盘失去第一相应
+extern NSString *const SDChatKeyboardResign;
