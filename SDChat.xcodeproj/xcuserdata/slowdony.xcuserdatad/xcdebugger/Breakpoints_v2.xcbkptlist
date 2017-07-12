@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDChat/SDChatViewController/SDViews/SDChatInputView.m"
-            timestampString = "521541022.643217"
+            filePath = "SDChat/SDChatViewController/SDViewControllers/SDChatDetailViewController.m"
+            timestampString = "521568891.447325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "-faceDidSelected:"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
+            landmarkName = "-SDChatInputViewFrameWillChange:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDChat/SDChatViewController/SDViews/SDChatInputView.m"
-            timestampString = "521542533.819664"
+            timestampString = "521567863.859118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "-keyboardResignFirstResponder:"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDChat/SDChatViewController/SDViewControllers/SDChatDetailViewController.m"
-            timestampString = "521544054.090822"
+            filePath = "SDChat/SDChatViewController/SDViews/SDChatDetailTableView.m"
+            timestampString = "521568793.354397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
-            landmarkName = "-SDChatInputViewAddFileClicked:"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDChat/SDChatViewController/SDViews/SDChatInputView.m"
-            timestampString = "521548924.575388"
+            filePath = "SDChat/SDChatViewController/SDViews/SDChatDetailTableView.m"
+            timestampString = "521568799.124974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
-            landmarkName = "-chatTextViewHeightFit:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDChat/SDChatViewController/SDViewControllers/SDChatDetailViewController.m"
+            timestampString = "521568885.020052"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "-SDChatDetailTableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

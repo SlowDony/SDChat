@@ -61,6 +61,11 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([self.sdLongDelegate respondsToSelector:@selector(SDChatDetailTableView:didSelectRowAtIndexPath:)]){
+        [self.sdLongDelegate SDChatDetailTableView:self didSelectRowAtIndexPath:indexPath];
+    }
+}
 
 #pragma mark -SDChatDetailTableViewCellDelegate
 -(void)SDChatDetailTableViewCellLongPress:(UILongPressGestureRecognizer *)longRecognizer{

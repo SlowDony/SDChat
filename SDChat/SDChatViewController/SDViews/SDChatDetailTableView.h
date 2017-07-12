@@ -15,6 +15,7 @@
 
 -(void)SDChatDetailTableViewLongPress:(UILongPressGestureRecognizer *)longPressGr;
 -(void)SDChatDetailTableViewDidScroll:(UIScrollView *)scrollView;
+-(void)SDChatDetailTableView:(id)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @interface SDChatDetailTableView : UITableView

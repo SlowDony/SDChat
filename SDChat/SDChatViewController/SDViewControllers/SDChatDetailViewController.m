@@ -25,7 +25,7 @@
 
 
 
-#define kInputViewHeight 273
+#define kInputViewHeight 275
 
 #define kBjViewOriFrame CGRectMake(0, 0, SDDeviceWidth, SDDeviceHeight);
 
@@ -107,9 +107,9 @@ UIScrollViewDelegate
 
     
 }
-//-(void)keyboardResignFirstResponder:(NSNotification *)notification{
-//
-//}
+-(void)keyboardResignFirstResponder:(NSNotification *)notification{
+
+}
 
 
 
@@ -268,12 +268,11 @@ UIScrollViewDelegate
 
 
 #pragma mark - SDChatDetailTableViewDelegate
--(void)tableView:(id)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)SDChatDetailTableView:(id)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.chatInputView.chatText resignFirstResponder];
-    
-//    SDLog(@"addFileY:%f",addFileY);
 
 }
+
 -(void)SDChatDetailTableViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y<=0  && self.isRefresh==NO)
     {
@@ -290,24 +289,6 @@ UIScrollViewDelegate
  */
 -(void)SDChatInputViewAddFileClicked:(UIButton *)sender{
     SDLog(@"添加图片");
-//    self.changingKeyboard = YES;
-//    if (self.chatInputView.chatText.inputView){
-//        self.chatInputView.chatText.inputView=nil;
-//        self.chatInputView.showFaceBtn=YES;
-//    }else {
-//        self.chatInputView.chatText.inputView=self.addFileView;
-//        self.chatInputView.showFaceBtn=NO;
-//        
-//    }
-//    
-//    // 关闭键盘
-//    [self.chatInputView.chatText resignFirstResponder];
-//    self.changingKeyboard = NO;
-//    
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                [self.chatInputView.chatText becomeFirstResponder];
-//        });
-//
 }
 
 
@@ -317,31 +298,8 @@ UIScrollViewDelegate
  @param sender 添加表情按钮监听
  */
 -(void)SDChatInputViewAddFaceClicked:(UIButton *)sender{
-//    SDLog(@"添加表情");
-//    [self sd_scrollToBottom];
-    
-//    self.changingKeyboard = YES;
-//    
-//    if (self.chatInputView.chatText.inputView){
-//        self.chatInputView.chatText.inputView=nil;
-//        self.chatInputView.showFaceBtn=YES;
-//    }else {
-//        self.chatInputView.chatText.inputView=self.addFaceView;
-//        
-//        self.chatInputView.showFaceBtn=NO;
-//
-//    }
-//
-//    // 关闭键盘
-//    [self.chatInputView.chatText resignFirstResponder];
-//    self.changingKeyboard = NO;
-//    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        // 打开键盘
-//        [self.chatInputView.chatText becomeFirstResponder];
-//
-//     });
-    
+    SDLog(@"添加表情");
+    SDLog(@"self.frame.input:%@",NSStringFromCGRect(self.chatInputView.frame));
 }
 -(void)SDChatInputView:(SDChatInputView *)chatInputView sendTextMessage:(NSString *)textMessage{
    
@@ -361,6 +319,9 @@ UIScrollViewDelegate
 
 }
 
+-(void)SDChatInputViewFrameWillChange:(SDChatInputView *)chatInputView{
+    SDLog(@"chatInputView.frame:%@",NSStringFromCGRect(chatInputView.frame))
+}
 #pragma mark - textFieldDelegate
 
 -(void)SDChatDetailTableViewLongPress:(UILongPressGestureRecognizer *)longPressGr{

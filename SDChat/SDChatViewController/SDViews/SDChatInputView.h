@@ -34,6 +34,8 @@
  */
 -(void)SDChatInputView:(SDChatInputView *)chatInputView sendTextMessage:(NSString *)textMessage;
 
+
+-(void)SDChatInputViewFrameWillChange:(SDChatInputView *)chatInputView ;
 @end
 
 @interface SDChatInputView : UIView
