@@ -87,7 +87,7 @@
 }
 - (void)showMenuViewController:(UIView *)showInView andIndexPath:(NSIndexPath *)indexPath message:(SDChatDetail *)chat
 {
-    [self becomeFirstResponder];
+   [self becomeFirstResponder];
     if (copyMenuItem   == nil) {
         copyMenuItem   = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(copyMessage:)];
     }
@@ -99,6 +99,8 @@
     [menu setMenuItems:@[copyMenuItem,deleteMenuItem]];
     [menu setTargetRect:showInView.frame inView:showInView.superview];
     [menu setMenuVisible:YES animated:YES];
+    
+
 }
 
 - (void)copyMessage:(UIMenuItem *)copyMenuItem

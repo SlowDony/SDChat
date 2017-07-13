@@ -9,13 +9,6 @@
 #import "SDChatInputView.h"
 #import "SDFaceModel.h"
 
-
-#import "SDChatAddFacekeyBoardView.h" //添加表情
-#import "SDChatAddFileKeyBoardView.h"//添加文件view
-
-
-#define keyBoardDefaultHeight 225 //自定义键盘的高度
-
 static CGFloat systemkeyBoardHeight = 0;
 static CGFloat inputViewDefaultHeight =50; //输入框默认高度
 static CGFloat chatTextInputHeight  =35; //默认输入框的高度
@@ -45,6 +38,7 @@ static CGFloat chatTextInputHeight  =35; //默认输入框的高度
 /**
  键盘容器(存放表情键盘和上传文件view)
  */
+
 @property (nonatomic,strong)UIView *keyBoardContainer ;
 
 
@@ -134,9 +128,12 @@ static CGFloat chatTextInputHeight  =35; //默认输入框的高度
     CGFloat systemKeyBoardHeight =[notification.userInfo[@"UIKeyboardBoundsUserInfoKey"]CGRectValue].size.height;
     //记录系统键盘的高度
     systemkeyBoardHeight =systemKeyBoardHeight;
-    //将自定义键盘位移
-    [self customKeyboardMove:SDDeviceHeight -systemKeyBoardHeight-inputViewDefaultHeight];
     
+    //当前的chatInputView高度
+    CGFloat inputViewHeight =CGRectGetHeight(self.inputViewContainer.frame);
+    //将自定义键盘位移
+    [self customKeyboardMove:SDDeviceHeight -systemKeyBoardHeight-inputViewHeight];
+    [self reloadInputViewBtnStateDefault];
 }
 
 
@@ -150,7 +147,7 @@ static CGFloat chatTextInputHeight  =35; //默认输入框的高度
     //按钮初始化刷新
     //    [self reloadSwitchButtons];
     [self customKeyboardMove:SDDeviceHeight - inputViewDefaultHeight];
-
+   
 }
 /**
  表情/添加键盘的容器
@@ -284,9 +281,17 @@ static CGFloat chatTextInputHeight  =35; //默认输入框的高度
     [self addSubview:self.inputViewContainer];
 //   表情键盘
     [self addSubview:self.keyBoardContainer];
-    
+    //重置表情
+    [self reloadInputViewBtnStateDefault];
 }
 
+-(void)reloadInputViewBtnStateDefault{
+    self.faceBtn.selected=NO;
+    self.failBtn.selected=NO;
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace"] forState:UIControlStateNormal];
+    [self.faceBtn setBackgroundImage:[UIImage imageNamed:@"chatAddFace_Highlight"] forState:UIControlStateHighlighted];
+    
+}
 
 /**
  观察输入框的高度变化
