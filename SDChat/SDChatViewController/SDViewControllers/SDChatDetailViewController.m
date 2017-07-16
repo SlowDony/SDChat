@@ -101,15 +101,8 @@ UIScrollViewDelegate
     
 }
 
--(void)systemKeyboardWillShow:(NSNotification *)notification{
-    
-    SDLog(@"notification:%@",notification.userInfo);
 
-    
-}
--(void)keyboardResignFirstResponder:(NSNotification *)notification{
 
-}
 
 
 
@@ -263,15 +256,66 @@ UIScrollViewDelegate
      SDLog(@"chatInputView :%@",NSStringFromCGRect(self.chatInputView.frame));
     SDLog(@"chatTableView :%@",NSStringFromCGRect(self.chatTableView.frame));
     
-    [self sd_scrollToBottomWithAnimated:YES];
+//    [self sd_scrollToBottomWithAnimated:YES];
+    [self sd_observerKeyboardFrameChange];
+}
+#pragma mark - 监听键盘弹出方法
+- (void)sd_observerKeyboardFrameChange
+{
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName: UIKeyboardWillChangeFrameNotification
+                                                      object:nil
+                                                       queue: [NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification * _Nonnull note) {
+//
+      NSLog(@"%s, line = %d,note =%@", __FUNCTION__, __LINE__, note);
+      
+      CGFloat keyboardHeight = [note.userInfo[@"UIKeyboardBoundsUserInfoKey"] CGRectValue].size.height;
+                                                      
+      CGFloat duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
+      
+      CGRect chatTableFrame =self.chatTableView.frame;
+                                                      
+      CGFloat chatInputViewHeight =CGRectGetHeight(self.chatInputView.frame);
+                                                      
+      chatTableFrame.size.height =SDDeviceHeight-keyboardHeight-(chatInputViewHeight-keyBoardDefaultHeight);
+      self.chatTableView.frame=chatTableFrame;
+      [self sd_scrollToBottomWithAnimated:YES];
+
+      SDLog(@"键盘之后View:%@",NSStringFromCGRect(self.view.frame));
+      
+      [UIView animateWithDuration:duration animations:^{
+          [self.chatTableView setNeedsLayout];
+      }];
+      
+      
+  }];
+    
+    
+    
 }
 
 
 #pragma mark - SDChatDetailTableViewDelegate
 -(void)SDChatDetailTableView:(id)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.chatInputView.chatText resignFirstResponder];
+    [self inputViewScrollToBottom];
+   
 
 }
+
+
+/**
+ 键盘消失inputView在屏幕底部
+ */
+-(void)inputViewScrollToBottom{
+    CGFloat chatInputHeight =CGRectGetHeight(self.chatInputView.frame);
+    self.chatInputView.frame =CGRectMake(0,SDDeviceHeight-(chatInputHeight-keyBoardDefaultHeight), SDDeviceWidth, chatInputHeight);
+    self.chatTableView.frame =CGRectMake(0, 0, SDDeviceWidth, CGRectGetMinY(self.chatInputView.frame));
+    
+    [self sd_scrollToBottomWithAnimated:YES];
+}
+
 
 -(void)SDChatDetailTableViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y<=0  && self.isRefresh==NO)
@@ -320,7 +364,11 @@ UIScrollViewDelegate
 }
 
 -(void)SDChatInputViewFrameWillChange:(SDChatInputView *)chatInputView{
-    SDLog(@"chatInputView.frame:%@",NSStringFromCGRect(chatInputView.frame))
+    SDLog(@"-----chatInputView.frame:%@",NSStringFromCGRect(chatInputView.frame))
+    SDLog(@"-----chatTableView1-----:%@",NSStringFromCGRect(self.chatTableView.frame))
+    self.chatTableView.frame =CGRectMake(0, 0, SDDeviceWidth, CGRectGetMinY(chatInputView.frame));
+    [self sd_scrollToBottomWithAnimated:YES];
+    SDLog(@"-----chatTableView2-----:%@",NSStringFromCGRect(self.chatTableView.frame))
 }
 #pragma mark - textFieldDelegate
 
@@ -343,6 +391,7 @@ UIScrollViewDelegate
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     [self.view endEditing:YES];
+    [self inputViewScrollToBottom];
 }
 
 -(void)dealloc{

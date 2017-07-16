@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SDChatAddFacekeyBoardView.h" //添加表情
+#import "SDChatAddFileKeyBoardView.h"//添加文件view
+#define keyBoardDefaultHeight 225 //自定义键盘的高度
 @class SDChatInputView;
 @protocol SDChatInputViewDelegate <NSObject>
 
