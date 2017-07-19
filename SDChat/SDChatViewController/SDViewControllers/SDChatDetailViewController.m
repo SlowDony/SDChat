@@ -257,7 +257,7 @@ UIScrollViewDelegate
     SDLog(@"chatTableView :%@",NSStringFromCGRect(self.chatTableView.frame));
     
 //    [self sd_scrollToBottomWithAnimated:YES];
-    [self sd_observerKeyboardFrameChange];
+//    [self sd_observerKeyboardFrameChange];
 }
 #pragma mark - 监听键盘弹出方法
 - (void)sd_observerKeyboardFrameChange
