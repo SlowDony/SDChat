@@ -1,15 +1,14 @@
 //
-//  UIView+Extension.m
-//  01-黑酷
+//  UIView+SDFrame.m
+//  SDChat
 //
-//  Created by apple on 14-6-27.
-//  Copyright (c) 2014年 heima. All rights reserved.
+//  Created by slowdony on 2017/8/5.
+//  Copyright © 2017年 slowdony. All rights reserved.
 //
 
-#import "UIView+Extension.h"
+#import "UIView+SDFrame.h"
 
-@implementation UIView (Extension)
-
+@implementation UIView (SDFrame)
 - (void)setX:(CGFloat)x
 {
     CGRect frame = self.frame;
@@ -84,8 +83,8 @@
 
 - (void)setSize:(CGSize)size
 {
-//    self.width = size.width;
-//    self.height = size.height;
+    //    self.width = size.width;
+    //    self.height = size.height;
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;

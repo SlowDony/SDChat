@@ -43,7 +43,8 @@ SDChatTableViewDelegate
     
     self.view.backgroundColor =[UIColor whiteColor];
     [self setTitle:@"对话"];
-   
+    NSArray *arr =@[@"haha",@"哦哦",@"营业"];
+    SDLog(@"arr:%@",arr);
     [self setUI];
     
     

@@ -1,14 +1,14 @@
 //
-//  UIBarButtonItem+Extension.m
-//  DemoPods
+//  UIBarButtonItem+SDExtension.m
+//  SDChat
 //
-//  Created by apple on 16/6/16.
-//  Copyright © 2016年 Dony. All rights reserved.
+//  Created by slowdony on 2017/8/5.
+//  Copyright © 2017年 slowdony. All rights reserved.
 //
 
-#import "UIBarButtonItem+Extension.h"
+#import "UIBarButtonItem+SDExtension.h"
 
-@implementation UIBarButtonItem (Extension)
+@implementation UIBarButtonItem (SDExtension)
 /**
  *  创建一个带图片的item
  *
@@ -19,14 +19,17 @@
  *
  *  @return 创建完的item
  */
-+(UIBarButtonItem *)itemTarget:(id)target WithAction:(SEL)action andImage:(NSString *)image andSelectImage:(NSString *)selectImage{
++(UIBarButtonItem *)itemTarget:(id)target
+                    withAction:(SEL)action
+                      andImage:(NSString *)image
+                andSelectImage:(NSString *)selectImage{
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 30, 30);
     
-//    [btn setTitle:@"<#string#>" forState:UIControlStateNormal];
+    //    [btn setTitle:@"<#string#>" forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
-   [btn setImage:[UIImage imageNamed:selectImage] forState:UIControlStateHighlighted];
+    [btn setImage:[UIImage imageNamed:selectImage] forState:UIControlStateHighlighted];
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 1, 0, 20)];
     [btn  addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc]initWithCustomView:btn];
@@ -41,7 +44,9 @@
  *
  *  @return 创建完的item
  */
-+(UIBarButtonItem *)itemWithaddTarget:(id)target Action:(SEL)action andTitle:(NSString *)title{
++(UIBarButtonItem *)itemWithaddTarget:(id)target
+                               action:(SEL)action
+                             andTitle:(NSString *)title{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 40, 40);
     [btn setTitle:title forState:UIControlStateNormal];
@@ -50,4 +55,5 @@
     [btn  addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc]initWithCustomView:btn];
 }
+
 @end

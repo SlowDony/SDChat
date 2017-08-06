@@ -1,14 +1,15 @@
 //
-//  NSDictionary+ChinesePrint.m
-//  Foundation框架之NSDationary
+//  NSDictionary+SDLogLocale.m
+//  SDChat
 //
-//  Created by apple on 15-4-17.
-//  Copyright (c) 2015年 CrazyDony. All rights reserved.
+//  Created by slowdony on 2017/8/5.
+//  Copyright © 2017年 slowdony. All rights reserved.
 //
 
-#import "NSDictionary+ChinesePrint.h"
+#import "NSDictionary+SDLogLocale.h"
 
-@implementation NSDictionary (ChinesePrint)
+@implementation NSDictionary (SDLogLocale)
+
 -(NSString *) descriptionWithLocale:(id)locale{
     NSMutableString *mulStr =[NSMutableString string ];
     
@@ -19,4 +20,5 @@
     [mulStr appendString:@"}"];
     return mulStr;
 }
+
 @end

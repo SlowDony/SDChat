@@ -1,14 +1,14 @@
 //
-//  UIView+Extension.h
-//  01-黑酷
+//  UIView+SDFrame.h
+//  SDChat
 //
-//  Created by apple on 14-6-27.
-//  Copyright (c) 2014年 heima. All rights reserved.
+//  Created by slowdony on 2017/8/5.
+//  Copyright © 2017年 slowdony. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Extension)
+@interface UIView (SDFrame)
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat centerX;

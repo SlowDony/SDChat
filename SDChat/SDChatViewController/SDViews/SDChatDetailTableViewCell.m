@@ -10,7 +10,7 @@
 #import "SDChatDetailFrame.h"
 #import "SDChatDetail.h"
 #import "SDChatMessage.h"
-#import "UIImage+YFResizing.h"
+#import "UIImage+SDResize.h"
 
 
 @interface SDChatDetailTableViewCell ()
@@ -75,7 +75,6 @@
     [self.contentView addSubview:namelab];
     //头像
     UIButton * iconHeadBtn= [UIButton buttonWithType:UIButtonTypeCustom];
-//    [iconHeadBtn setImage:[UIImage imageNamed:@"chatHead"] forState:UIControlStateNormal];
     [iconHeadBtn  addTarget:self action:@selector(userInfoClick) forControlEvents:UIControlEventTouchUpInside];
     self.iconHeadBtn =iconHeadBtn;
     [self.contentView addSubview: iconHeadBtn];
@@ -120,8 +119,8 @@
         self.timeLab.text=chat.timeStr;
         self.timeLab.textAlignment=NSTextAlignmentCenter;
         [self.iconHeadBtn setBackgroundImage:[UIImage imageNamed:chat.iconHead] forState:UIControlStateNormal];
-        [self.contentBtn setBackgroundImage:[UIImage yf_resizingWithIma:chat.contectTextBackgroundIma] forState:UIControlStateNormal];
-        [self.contentBtn setBackgroundImage:[UIImage yf_resizingWithIma:chat.contectTextBackgroundHLIma] forState:UIControlStateHighlighted];
+        [self.contentBtn setBackgroundImage:[UIImage SDResizeWithIma:chat.contectTextBackgroundIma] forState:UIControlStateNormal];
+        [self.contentBtn setBackgroundImage:[UIImage SDResizeWithIma:chat.contectTextBackgroundHLIma] forState:UIControlStateHighlighted];
         //    self.contentBtn.backgroundColor=[UIColor redColor];
         
         self.nameLab.text=chat.nameStr;

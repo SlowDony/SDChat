@@ -15,6 +15,13 @@
 		EF8A1FB51F02B19300E526B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8A1FB31F02B19300E526B3 /* LaunchScreen.storyboard */; };
 		EF8A1FC01F02B19300E526B3 /* SDChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A1FBF1F02B19300E526B3 /* SDChatTests.m */; };
 		EF8A1FCB1F02B19300E526B3 /* SDChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A1FCA1F02B19300E526B3 /* SDChatUITests.m */; };
+		EFDA49671F35C3EF0045C4F6 /* UIView+SDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA49661F35C3EF0045C4F6 /* UIView+SDFrame.m */; };
+		EFDA496A1F35C4980045C4F6 /* NSArray+SDLogLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA49691F35C4980045C4F6 /* NSArray+SDLogLocale.m */; };
+		EFDA496D1F35C5CC0045C4F6 /* NSDictionary+SDLogLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA496C1F35C5CC0045C4F6 /* NSDictionary+SDLogLocale.m */; };
+		EFDA49701F35C6100045C4F6 /* NSObject+SDLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA496F1F35C6100045C4F6 /* NSObject+SDLogModel.m */; };
+		EFDA49731F35C6EF0045C4F6 /* UIBarButtonItem+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA49721F35C6EF0045C4F6 /* UIBarButtonItem+SDExtension.m */; };
+		EFDA49761F35C9D50045C4F6 /* UIImage+SDResize.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA49751F35C9D50045C4F6 /* UIImage+SDResize.m */; };
+		EFDA497C1F35CB5B0045C4F6 /* UIColor+SDHex.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA497B1F35CB5B0045C4F6 /* UIColor+SDHex.m */; };
 		EFDCA5261F06A97C00398D8D /* sdChatFaceEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFDCA5251F06A97C00398D8D /* sdChatFaceEmoji.plist */; };
 		EFF0E4B61F03E9E2008A337A /* SDChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E47C1F03E9E2008A337A /* SDChatViewController.m */; };
 		EFF0E4B71F03E9E2008A337A /* SDChatMessageConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E47F1F03E9E2008A337A /* SDChatMessageConst.m */; };
@@ -38,13 +45,7 @@
 		EFF0E4CA1F03E9E2008A337A /* SDChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4AD1F03E9E2008A337A /* SDChatInputView.m */; };
 		EFF0E4CD1F03E9E2008A337A /* SDChatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4B31F03E9E2008A337A /* SDChatTableView.m */; };
 		EFF0E4CE1F03E9E2008A337A /* SDChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */; };
-		EFF0E4DF1F03F25C008A337A /* NSArray+NSLogLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4D21F03F25C008A337A /* NSArray+NSLogLocale.m */; };
-		EFF0E4E01F03F25C008A337A /* NSDictionary+ChinesePrint.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4D41F03F25C008A337A /* NSDictionary+ChinesePrint.m */; };
-		EFF0E4E11F03F25C008A337A /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4D61F03F25C008A337A /* UIBarButtonItem+Extension.m */; };
 		EFF0E4E21F03F25C008A337A /* UIButton+buton_Text.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4D81F03F25C008A337A /* UIButton+buton_Text.m */; };
-		EFF0E4E31F03F25C008A337A /* UIColor+UIColor_Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4DA1F03F25C008A337A /* UIColor+UIColor_Hex.m */; };
-		EFF0E4E41F03F25C008A337A /* UIImage+YFResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4DC1F03F25C008A337A /* UIImage+YFResizing.m */; };
-		EFF0E4E51F03F25C008A337A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4DE1F03F25C008A337A /* UIView+Extension.m */; };
 		EFF0E5001F03FBA0008A337A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EFF0E4E81F03FBA0008A337A /* LICENSE */; };
 		EFF0E5011F03FBA0008A337A /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */; };
 		EFF0E5021F03FBA0008A337A /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4EE1F03FBA0008A337A /* MJFoundation.m */; };
@@ -239,6 +240,20 @@
 		EF8A1FCA1F02B19300E526B3 /* SDChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDChatUITests.m; sourceTree = "<group>"; };
 		EF8A1FCC1F02B19300E526B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8A20351F02B34100E526B3 /* SDHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHeader.h; sourceTree = "<group>"; };
+		EFDA49651F35C3EF0045C4F6 /* UIView+SDFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDFrame.h"; sourceTree = "<group>"; };
+		EFDA49661F35C3EF0045C4F6 /* UIView+SDFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDFrame.m"; sourceTree = "<group>"; };
+		EFDA49681F35C4980045C4F6 /* NSArray+SDLogLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SDLogLocale.h"; sourceTree = "<group>"; };
+		EFDA49691F35C4980045C4F6 /* NSArray+SDLogLocale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SDLogLocale.m"; sourceTree = "<group>"; };
+		EFDA496B1F35C5CC0045C4F6 /* NSDictionary+SDLogLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SDLogLocale.h"; sourceTree = "<group>"; };
+		EFDA496C1F35C5CC0045C4F6 /* NSDictionary+SDLogLocale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SDLogLocale.m"; sourceTree = "<group>"; };
+		EFDA496E1F35C6100045C4F6 /* NSObject+SDLogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SDLogModel.h"; sourceTree = "<group>"; };
+		EFDA496F1F35C6100045C4F6 /* NSObject+SDLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SDLogModel.m"; sourceTree = "<group>"; };
+		EFDA49711F35C6EF0045C4F6 /* UIBarButtonItem+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+SDExtension.h"; sourceTree = "<group>"; };
+		EFDA49721F35C6EF0045C4F6 /* UIBarButtonItem+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+SDExtension.m"; sourceTree = "<group>"; };
+		EFDA49741F35C9D50045C4F6 /* UIImage+SDResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SDResize.h"; sourceTree = "<group>"; };
+		EFDA49751F35C9D50045C4F6 /* UIImage+SDResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SDResize.m"; sourceTree = "<group>"; };
+		EFDA497A1F35CB5B0045C4F6 /* UIColor+SDHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SDHex.h"; sourceTree = "<group>"; };
+		EFDA497B1F35CB5B0045C4F6 /* UIColor+SDHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SDHex.m"; sourceTree = "<group>"; };
 		EFDCA5251F06A97C00398D8D /* sdChatFaceEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sdChatFaceEmoji.plist; sourceTree = "<group>"; };
 		EFF0E47B1F03E9E2008A337A /* SDChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatViewController.h; sourceTree = "<group>"; };
 		EFF0E47C1F03E9E2008A337A /* SDChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatViewController.m; sourceTree = "<group>"; };
@@ -285,20 +300,8 @@
 		EFF0E4B41F03E9E2008A337A /* SDChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatTableViewCell.h; sourceTree = "<group>"; };
 		EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatTableViewCell.m; sourceTree = "<group>"; };
 		EFF0E4CF1F03EF3D008A337A /* SDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPrefixHeader.pch; sourceTree = "<group>"; };
-		EFF0E4D11F03F25C008A337A /* NSArray+NSLogLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSLogLocale.h"; sourceTree = "<group>"; };
-		EFF0E4D21F03F25C008A337A /* NSArray+NSLogLocale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSLogLocale.m"; sourceTree = "<group>"; };
-		EFF0E4D31F03F25C008A337A /* NSDictionary+ChinesePrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ChinesePrint.h"; sourceTree = "<group>"; };
-		EFF0E4D41F03F25C008A337A /* NSDictionary+ChinesePrint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ChinesePrint.m"; sourceTree = "<group>"; };
-		EFF0E4D51F03F25C008A337A /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
-		EFF0E4D61F03F25C008A337A /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		EFF0E4D71F03F25C008A337A /* UIButton+buton_Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+buton_Text.h"; sourceTree = "<group>"; };
 		EFF0E4D81F03F25C008A337A /* UIButton+buton_Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+buton_Text.m"; sourceTree = "<group>"; };
-		EFF0E4D91F03F25C008A337A /* UIColor+UIColor_Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColor_Hex.h"; sourceTree = "<group>"; };
-		EFF0E4DA1F03F25C008A337A /* UIColor+UIColor_Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColor_Hex.m"; sourceTree = "<group>"; };
-		EFF0E4DB1F03F25C008A337A /* UIImage+YFResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFResizing.h"; sourceTree = "<group>"; };
-		EFF0E4DC1F03F25C008A337A /* UIImage+YFResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFResizing.m"; sourceTree = "<group>"; };
-		EFF0E4DD1F03F25C008A337A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		EFF0E4DE1F03F25C008A337A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		EFF0E4E81F03FBA0008A337A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EFF0E4EA1F03FBA0008A337A /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		EFF0E4EB1F03FBA0008A337A /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -691,20 +694,22 @@
 		EFF0E4D01F03F25C008A337A /* Category+Extension  */ = {
 			isa = PBXGroup;
 			children = (
-				EFF0E4D11F03F25C008A337A /* NSArray+NSLogLocale.h */,
-				EFF0E4D21F03F25C008A337A /* NSArray+NSLogLocale.m */,
-				EFF0E4D31F03F25C008A337A /* NSDictionary+ChinesePrint.h */,
-				EFF0E4D41F03F25C008A337A /* NSDictionary+ChinesePrint.m */,
-				EFF0E4D51F03F25C008A337A /* UIBarButtonItem+Extension.h */,
-				EFF0E4D61F03F25C008A337A /* UIBarButtonItem+Extension.m */,
+				EFDA49681F35C4980045C4F6 /* NSArray+SDLogLocale.h */,
+				EFDA49691F35C4980045C4F6 /* NSArray+SDLogLocale.m */,
+				EFDA496B1F35C5CC0045C4F6 /* NSDictionary+SDLogLocale.h */,
+				EFDA496C1F35C5CC0045C4F6 /* NSDictionary+SDLogLocale.m */,
+				EFDA496E1F35C6100045C4F6 /* NSObject+SDLogModel.h */,
+				EFDA496F1F35C6100045C4F6 /* NSObject+SDLogModel.m */,
+				EFDA49711F35C6EF0045C4F6 /* UIBarButtonItem+SDExtension.h */,
+				EFDA49721F35C6EF0045C4F6 /* UIBarButtonItem+SDExtension.m */,
 				EFF0E4D71F03F25C008A337A /* UIButton+buton_Text.h */,
 				EFF0E4D81F03F25C008A337A /* UIButton+buton_Text.m */,
-				EFF0E4D91F03F25C008A337A /* UIColor+UIColor_Hex.h */,
-				EFF0E4DA1F03F25C008A337A /* UIColor+UIColor_Hex.m */,
-				EFF0E4DB1F03F25C008A337A /* UIImage+YFResizing.h */,
-				EFF0E4DC1F03F25C008A337A /* UIImage+YFResizing.m */,
-				EFF0E4DD1F03F25C008A337A /* UIView+Extension.h */,
-				EFF0E4DE1F03F25C008A337A /* UIView+Extension.m */,
+				EFDA497A1F35CB5B0045C4F6 /* UIColor+SDHex.h */,
+				EFDA497B1F35CB5B0045C4F6 /* UIColor+SDHex.m */,
+				EFDA49741F35C9D50045C4F6 /* UIImage+SDResize.h */,
+				EFDA49751F35C9D50045C4F6 /* UIImage+SDResize.m */,
+				EFDA49651F35C3EF0045C4F6 /* UIView+SDFrame.h */,
+				EFDA49661F35C3EF0045C4F6 /* UIView+SDFrame.m */,
 			);
 			path = "Category+Extension ";
 			sourceTree = "<group>";
@@ -1187,32 +1192,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFDA49761F35C9D50045C4F6 /* UIImage+SDResize.m in Sources */,
 				EFF0E4E21F03F25C008A337A /* UIButton+buton_Text.m in Sources */,
+				EFDA49671F35C3EF0045C4F6 /* UIView+SDFrame.m in Sources */,
 				EFF0E5011F03FBA0008A337A /* MJExtensionConst.m in Sources */,
 				EFF0E4C41F03E9E2008A337A /* SDChatDetailTableViewCell.m in Sources */,
+				EFDA496A1F35C4980045C4F6 /* NSArray+SDLogLocale.m in Sources */,
 				EFF0E5081F03FBA0008A337A /* NSObject+MJKeyValue.m in Sources */,
 				EFF0E5071F03FBA0008A337A /* NSObject+MJCoding.m in Sources */,
 				EFF0E5041F03FBA0008A337A /* MJPropertyKey.m in Sources */,
 				EFF0E4CE1F03E9E2008A337A /* SDChatTableViewCell.m in Sources */,
+				EFDA49701F35C6100045C4F6 /* NSObject+SDLogModel.m in Sources */,
 				EFF0E4C11F03E9E2008A337A /* SDChatAddFileKeyBoardView.m in Sources */,
-				EFF0E4E31F03F25C008A337A /* UIColor+UIColor_Hex.m in Sources */,
 				EFF0E4CD1F03E9E2008A337A /* SDChatTableView.m in Sources */,
 				EFF0E5021F03FBA0008A337A /* MJFoundation.m in Sources */,
-				EFF0E4E41F03F25C008A337A /* UIImage+YFResizing.m in Sources */,
 				EFF0E4B71F03E9E2008A337A /* SDChatMessageConst.m in Sources */,
 				EFF0E4C61F03E9E2008A337A /* SDFaceListView.m in Sources */,
-				EFF0E4E51F03F25C008A337A /* UIView+Extension.m in Sources */,
 				EFF0E4C01F03E9E2008A337A /* SDChatDetailViewController.m in Sources */,
 				EFF0E4CA1F03E9E2008A337A /* SDChatInputView.m in Sources */,
 				EFF0E4C51F03E9E2008A337A /* SDChatAddFacekeyBoardView.m in Sources */,
 				EFF0E4C71F03E9E2008A337A /* SDFaceToolBar.m in Sources */,
 				EFF0E4C21F03E9E2008A337A /* SDChatConnectionTableViewCell.m in Sources */,
 				EFF0E4B91F03E9E2008A337A /* SDChatDetailFrame.m in Sources */,
-				EFF0E4E11F03F25C008A337A /* UIBarButtonItem+Extension.m in Sources */,
 				EF8A1FAD1F02B19300E526B3 /* ViewController.m in Sources */,
 				EFF0E4C31F03E9E2008A337A /* SDChatDetailTableView.m in Sources */,
 				EFF0E4C81F03E9E2008A337A /* SDFaceView.m in Sources */,
-				EFF0E4E01F03F25C008A337A /* NSDictionary+ChinesePrint.m in Sources */,
 				EFF0E50A1F03FBA0008A337A /* NSString+MJExtension.m in Sources */,
 				EFF0E4BE1F03E9E2008A337A /* SDFaceArrTool.m in Sources */,
 				EFF0E4BD1F03E9E2008A337A /* NSString+Emoji.m in Sources */,
@@ -1222,13 +1226,15 @@
 				EF8A1FA71F02B19300E526B3 /* main.m in Sources */,
 				EFF0E4B61F03E9E2008A337A /* SDChatViewController.m in Sources */,
 				EFF0E5051F03FBA0008A337A /* MJPropertyType.m in Sources */,
+				EFDA496D1F35C5CC0045C4F6 /* NSDictionary+SDLogLocale.m in Sources */,
 				EFF0E4BA1F03E9E2008A337A /* SDChatMessage.m in Sources */,
 				EFF0E5031F03FBA0008A337A /* MJProperty.m in Sources */,
 				EFF0E5091F03FBA0008A337A /* NSObject+MJProperty.m in Sources */,
 				EFF0E4C91F03E9E2008A337A /* SDFaceViewBtn.m in Sources */,
-				EFF0E4DF1F03F25C008A337A /* NSArray+NSLogLocale.m in Sources */,
 				EFF0E4BB1F03E9E2008A337A /* SDChat.m in Sources */,
+				EFDA497C1F35CB5B0045C4F6 /* UIColor+SDHex.m in Sources */,
 				EFF0E50B1F03FBA0008A337A /* README.md in Sources */,
+				EFDA49731F35C6EF0045C4F6 /* UIBarButtonItem+SDExtension.m in Sources */,
 				EFF0E4B81F03E9E2008A337A /* SDChatDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

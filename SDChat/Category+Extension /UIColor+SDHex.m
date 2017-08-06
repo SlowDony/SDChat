@@ -1,15 +1,35 @@
 //
-//  UIColor+UIColor_Hex.m
-//  16进制颜色
+//  UIColor+SDHex.m
+//  SDChat
 //
-//  Created by tcrj on 15/12/21.
-//  Copyright (c) 2015年 tcrj. All rights reserved.
+//  Created by slowdony on 2017/8/5.
+//  Copyright © 2017年 slowdony. All rights reserved.
 //
 
-#import "UIColor+UIColor_Hex.h"
+#import "UIColor+SDHex.h"
 
-@implementation UIColor (UIColor_Hex)
-+ (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha
+@implementation UIColor (SDHex)
+
+/**
+ 从十六进制字符串获取颜色 (默认透明色)
+ 
+ @param color 支持@“#123456”、 @“0X123456”、 @“123456”三种格式
+ @return color
+ */
++ (UIColor *)colorWithHexString:(NSString *)color
+{
+    return [self colorWithHexString:color alpha:1.0f];
+}
+
+/**
+ 从十六进制字符串获取颜色
+ 
+ @param color 支持@“#123456”、 @“0X123456”、 @“123456”三种格式
+ @param alpha 透明色
+ @return 转换后的color
+ */
++ (UIColor *)colorWithHexString:(NSString *)color
+                          alpha:(CGFloat)alpha
 {
     //删除字符串中的空格
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
@@ -55,9 +75,5 @@
     return [UIColor colorWithRed:((float)r / 255.0f) green:((float)g / 255.0f) blue:((float)b / 255.0f) alpha:alpha];
 }
 
-//默认alpha值为1
-+ (UIColor *)colorWithHexString:(NSString *)color
-{
-    return [self colorWithHexString:color alpha:1.0f];
-}
+
 @end
