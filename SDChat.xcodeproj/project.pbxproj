@@ -17,6 +17,8 @@
 		EF6D59351F388A9C00B0C1FD /* UIView+SDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D592D1F388A9C00B0C1FD /* UIView+SDFrame.m */; };
 		EF6D593B1F388AF900B0C1FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D59381F388AF900B0C1FD /* AppDelegate.m */; };
 		EF6D593C1F388AF900B0C1FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D593A1F388AF900B0C1FD /* ViewController.m */; };
+		EF6D593E1F389CEE00B0C1FD /* SDChat.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6D593D1F389CEE00B0C1FD /* SDChat.png */; };
+		EF6D59401F38A09600B0C1FD /* SDChat.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF6D593F1F38A09600B0C1FD /* SDChat.gif */; };
 		EF8A1FA71F02B19300E526B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A1FA61F02B19300E526B3 /* main.m */; };
 		EF8A1FB01F02B19300E526B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8A1FAE1F02B19300E526B3 /* Main.storyboard */; };
 		EF8A1FB21F02B19300E526B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8A1FB11F02B19300E526B3 /* Assets.xcassets */; };
@@ -243,6 +245,8 @@
 		EF6D59381F388AF900B0C1FD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EF6D59391F388AF900B0C1FD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EF6D593A1F388AF900B0C1FD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF6D593D1F389CEE00B0C1FD /* SDChat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDChat.png; sourceTree = "<group>"; };
+		EF6D593F1F38A09600B0C1FD /* SDChat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDChat.gif; sourceTree = "<group>"; };
 		EF8A1FA21F02B19300E526B3 /* SDChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8A1FA61F02B19300E526B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF8A1FAF1F02B19300E526B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -565,6 +569,8 @@
 				EF8A1FAE1F02B19300E526B3 /* Main.storyboard */,
 				EF8A1FB11F02B19300E526B3 /* Assets.xcassets */,
 				EF8A1FB31F02B19300E526B3 /* LaunchScreen.storyboard */,
+				EF6D593F1F38A09600B0C1FD /* SDChat.gif */,
+				EF6D593D1F389CEE00B0C1FD /* SDChat.png */,
 				EF8A1FB61F02B19300E526B3 /* Info.plist */,
 				EF8A1FA51F02B19300E526B3 /* Supporting Files */,
 			);
@@ -1038,6 +1044,7 @@
 				EFF261E91F1BBE3C00EEEEC8 /* 3.png in Resources */,
 				EFF261E21F1BBE3C00EEEEC8 /* 27.gif in Resources */,
 				EFF2620F1F1BBE3C00EEEEC8 /* 47.png in Resources */,
+				EF6D593E1F389CEE00B0C1FD /* SDChat.png in Resources */,
 				EFF2621C1F1BBE3C00EEEEC8 /* 53.gif in Resources */,
 				EFF261F21F1BBE3C00EEEEC8 /* 34.gif in Resources */,
 				EFF2621D1F1BBE3C00EEEEC8 /* 53.png in Resources */,
@@ -1174,6 +1181,7 @@
 				EFF261FE1F1BBE3C00EEEEC8 /* 4.gif in Resources */,
 				EFF261D71F1BBE3C00EEEEC8 /* 21.png in Resources */,
 				EFF261DA1F1BBE3C00EEEEC8 /* 23.gif in Resources */,
+				EF6D59401F38A09600B0C1FD /* SDChat.gif in Resources */,
 				EFF2620A1F1BBE3C00EEEEC8 /* 45.gif in Resources */,
 				EFF2623A1F1BBE3C00EEEEC8 /* 67.gif in Resources */,
 			);
