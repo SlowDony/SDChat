@@ -5,19 +5,12 @@
 //  Created by Megatron Joker on 2017/4/7.
 //  Copyright © 2017年 SlowDony. All rights reserved.
 //
-/*
- socket的客户端编程
- 1.连接到服务器(ip+port)
- 2.监听连接服务器是否成功
- 3.如果连接成功,就可以发送消息给服务器
- 4.监听服务器转发过来的消息
- 
- */
+
 
 #import "SDChatViewController.h"
 #import "SDChatDetailViewController.h"
 #import "SDChatTableView.h"
-//#import "UIButton+WebCache.h"
+
 
 #import "SDChat.h" //聊天对话模型
 
@@ -108,8 +101,7 @@ SDChatTableViewDelegate
     
     [self.view endEditing:YES];
 }
-//1.连接服务器(IP+port.ip+端口号)
-//2.监听连接服务器是否成功
+
 
 -(void)setUI{
     

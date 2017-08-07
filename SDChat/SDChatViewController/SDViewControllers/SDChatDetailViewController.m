@@ -95,6 +95,9 @@ UIScrollViewDelegate
     [[NSNotificationCenter defaultCenter] addObserver:self.chatInputView selector:@selector(keyboardResignFirstResponder:) name:SDChatKeyboardResign object:nil];
     
 }
+
+
+
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     
@@ -240,8 +243,7 @@ UIScrollViewDelegate
     return _chatInputView;
 }
 
-//1.连接服务器(IP+port.ip+端口号)
-//2.监听连接服务器是否成功
+
 
 -(void)setUI{
 
@@ -253,12 +255,12 @@ UIScrollViewDelegate
     [self.bjView addSubview:self.chatInputView];
     
     SDLog(@"self.view :%@",NSStringFromCGRect(self.bjView.frame));
-     SDLog(@"chatInputView :%@",NSStringFromCGRect(self.chatInputView.frame));
+    SDLog(@"chatInputView :%@",NSStringFromCGRect(self.chatInputView.frame));
     SDLog(@"chatTableView :%@",NSStringFromCGRect(self.chatTableView.frame));
     
-//    [self sd_scrollToBottomWithAnimated:YES];
-//    [self sd_observerKeyboardFrameChange];
+
 }
+
 #pragma mark - 监听键盘弹出方法
 - (void)sd_observerKeyboardFrameChange
 {
@@ -300,8 +302,6 @@ UIScrollViewDelegate
 -(void)SDChatDetailTableView:(id)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.chatInputView.chatText resignFirstResponder];
     [self inputViewScrollToBottom];
-   
-
 }
 
 
