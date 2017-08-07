@@ -48,7 +48,6 @@
 		EFF0E4CA1F03E9E2008A337A /* SDChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4AD1F03E9E2008A337A /* SDChatInputView.m */; };
 		EFF0E4CD1F03E9E2008A337A /* SDChatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4B31F03E9E2008A337A /* SDChatTableView.m */; };
 		EFF0E4CE1F03E9E2008A337A /* SDChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */; };
-		EFF0E5001F03FBA0008A337A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EFF0E4E81F03FBA0008A337A /* LICENSE */; };
 		EFF0E5011F03FBA0008A337A /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */; };
 		EFF0E5021F03FBA0008A337A /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4EE1F03FBA0008A337A /* MJFoundation.m */; };
 		EFF0E5031F03FBA0008A337A /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F01F03FBA0008A337A /* MJProperty.m */; };
@@ -59,7 +58,6 @@
 		EFF0E5081F03FBA0008A337A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FA1F03FBA0008A337A /* NSObject+MJKeyValue.m */; };
 		EFF0E5091F03FBA0008A337A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FC1F03FBA0008A337A /* NSObject+MJProperty.m */; };
 		EFF0E50A1F03FBA0008A337A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FE1F03FBA0008A337A /* NSString+MJExtension.m */; };
-		EFF0E50B1F03FBA0008A337A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FF1F03FBA0008A337A /* README.md */; };
 		EFF261BC1F1BBE3C00EEEEC8 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFF2612C1F1BBE3C00EEEEC8 /* 1.gif */; };
 		EFF261BD1F1BBE3C00EEEEC8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF2612D1F1BBE3C00EEEEC8 /* 1.png */; };
 		EFF261BE1F1BBE3C00EEEEC8 /* 10.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFF2612E1F1BBE3C00EEEEC8 /* 10.gif */; };
@@ -306,7 +304,6 @@
 		EFF0E4B41F03E9E2008A337A /* SDChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatTableViewCell.h; sourceTree = "<group>"; };
 		EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatTableViewCell.m; sourceTree = "<group>"; };
 		EFF0E4CF1F03EF3D008A337A /* SDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPrefixHeader.pch; sourceTree = "<group>"; };
-		EFF0E4E81F03FBA0008A337A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EFF0E4EA1F03FBA0008A337A /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		EFF0E4EB1F03FBA0008A337A /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
 		EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
@@ -328,7 +325,6 @@
 		EFF0E4FC1F03FBA0008A337A /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		EFF0E4FD1F03FBA0008A337A /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		EFF0E4FE1F03FBA0008A337A /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
-		EFF0E4FF1F03FBA0008A337A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EFF2612C1F1BBE3C00EEEEC8 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
 		EFF2612D1F1BBE3C00EEEEC8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		EFF2612E1F1BBE3C00EEEEC8 /* 10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 10.gif; sourceTree = "<group>"; };
@@ -739,9 +735,7 @@
 		EFF0E4E71F03FBA0008A337A /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
-				EFF0E4E81F03FBA0008A337A /* LICENSE */,
 				EFF0E4E91F03FBA0008A337A /* MJExtension */,
-				EFF0E4FF1F03FBA0008A337A /* README.md */,
 			);
 			path = MJExtension;
 			sourceTree = "<group>";
@@ -1140,7 +1134,6 @@
 				EFF262201F1BBE3C00EEEEC8 /* 55.gif in Resources */,
 				EFF261D41F1BBE3C00EEEEC8 /* 20.gif in Resources */,
 				EFF2622B1F1BBE3C00EEEEC8 /* 6.png in Resources */,
-				EFF0E5001F03FBA0008A337A /* LICENSE in Resources */,
 				EFF262411F1BBE3C00EEEEC8 /* 7.png in Resources */,
 				EFF262451F1BBE3C00EEEEC8 /* 71.png in Resources */,
 				EFF262141F1BBE3C00EEEEC8 /* 5.gif in Resources */,
@@ -1250,7 +1243,6 @@
 				EFF0E5091F03FBA0008A337A /* NSObject+MJProperty.m in Sources */,
 				EFF0E4C91F03E9E2008A337A /* SDFaceViewBtn.m in Sources */,
 				EFF0E4BB1F03E9E2008A337A /* SDChat.m in Sources */,
-				EFF0E50B1F03FBA0008A337A /* README.md in Sources */,
 				EFF0E4B81F03E9E2008A337A /* SDChatDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

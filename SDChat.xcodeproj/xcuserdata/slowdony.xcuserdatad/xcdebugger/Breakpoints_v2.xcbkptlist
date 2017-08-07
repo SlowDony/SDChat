@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDChat/SDChatViewController/SDViews/SDChatInputView.m"
-            timestampString = "521626223.320132"
+            timestampString = "523807033.954198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "-keyboardResignFirstResponder:"
             landmarkType = "7">
          </BreakpointContent>
