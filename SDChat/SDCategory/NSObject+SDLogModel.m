@@ -9,7 +9,9 @@
 #import "NSObject+SDLogModel.h"
 #import <objc/runtime.h>
 @implementation NSObject (SDLogModel)
+
 //重写description
+/*
 - (NSString *)description
 {
     //初始化字典
@@ -33,4 +35,5 @@
     return [NSString stringWithFormat:@"<%@:== %p>--%@",[self class],self,dictionary];
 }
 
+ */
 @end

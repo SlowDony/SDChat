@@ -987,6 +987,7 @@
 				TargetAttributes = {
 					EF8A1FA11F02B19300E526B3 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3PYAVNJVS7;
 						ProvisioningStyle = Automatic;
 					};
 					EF8A1FBA1F02B19300E526B3 = {
@@ -1396,6 +1397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3PYAVNJVS7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SDChat/SDPrefixHeader.pch";
 				INFOPLIST_FILE = SDChat/Info.plist;
@@ -1409,6 +1411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3PYAVNJVS7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SDChat/SDPrefixHeader.pch";
 				INFOPLIST_FILE = SDChat/Info.plist;
