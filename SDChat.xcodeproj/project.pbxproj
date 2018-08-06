@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6028C4D8485537F7A143AEA7 /* libPods-SDChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D84DD4DA8D475415992E26 /* libPods-SDChat.a */; };
 		EF6D592E1F388A9C00B0C1FD /* NSArray+SDLogLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D591F1F388A9C00B0C1FD /* NSArray+SDLogLocale.m */; };
 		EF6D592F1F388A9C00B0C1FD /* NSDictionary+SDLogLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D59211F388A9C00B0C1FD /* NSDictionary+SDLogLocale.m */; };
 		EF6D59301F388A9C00B0C1FD /* NSObject+SDLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D59231F388A9C00B0C1FD /* NSObject+SDLogModel.m */; };
@@ -48,16 +49,6 @@
 		EFF0E4CA1F03E9E2008A337A /* SDChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4AD1F03E9E2008A337A /* SDChatInputView.m */; };
 		EFF0E4CD1F03E9E2008A337A /* SDChatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4B31F03E9E2008A337A /* SDChatTableView.m */; };
 		EFF0E4CE1F03E9E2008A337A /* SDChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */; };
-		EFF0E5011F03FBA0008A337A /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */; };
-		EFF0E5021F03FBA0008A337A /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4EE1F03FBA0008A337A /* MJFoundation.m */; };
-		EFF0E5031F03FBA0008A337A /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F01F03FBA0008A337A /* MJProperty.m */; };
-		EFF0E5041F03FBA0008A337A /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F21F03FBA0008A337A /* MJPropertyKey.m */; };
-		EFF0E5051F03FBA0008A337A /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F41F03FBA0008A337A /* MJPropertyType.m */; };
-		EFF0E5061F03FBA0008A337A /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F61F03FBA0008A337A /* NSObject+MJClass.m */; };
-		EFF0E5071F03FBA0008A337A /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4F81F03FBA0008A337A /* NSObject+MJCoding.m */; };
-		EFF0E5081F03FBA0008A337A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FA1F03FBA0008A337A /* NSObject+MJKeyValue.m */; };
-		EFF0E5091F03FBA0008A337A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FC1F03FBA0008A337A /* NSObject+MJProperty.m */; };
-		EFF0E50A1F03FBA0008A337A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF0E4FE1F03FBA0008A337A /* NSString+MJExtension.m */; };
 		EFF261BC1F1BBE3C00EEEEC8 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFF2612C1F1BBE3C00EEEEC8 /* 1.gif */; };
 		EFF261BD1F1BBE3C00EEEEC8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF2612D1F1BBE3C00EEEEC8 /* 1.png */; };
 		EFF261BE1F1BBE3C00EEEEC8 /* 10.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFF2612E1F1BBE3C00EEEEC8 /* 10.gif */; };
@@ -223,6 +214,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE1D2E7AE8466C13CE25BA6B /* Pods-SDChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDChat/Pods-SDChat.debug.xcconfig"; sourceTree = "<group>"; };
 		EF6D591E1F388A9C00B0C1FD /* NSArray+SDLogLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SDLogLocale.h"; sourceTree = "<group>"; };
 		EF6D591F1F388A9C00B0C1FD /* NSArray+SDLogLocale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SDLogLocale.m"; sourceTree = "<group>"; };
 		EF6D59201F388A9C00B0C1FD /* NSDictionary+SDLogLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SDLogLocale.h"; sourceTree = "<group>"; };
@@ -304,27 +296,6 @@
 		EFF0E4B41F03E9E2008A337A /* SDChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatTableViewCell.h; sourceTree = "<group>"; };
 		EFF0E4B51F03E9E2008A337A /* SDChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatTableViewCell.m; sourceTree = "<group>"; };
 		EFF0E4CF1F03EF3D008A337A /* SDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPrefixHeader.pch; sourceTree = "<group>"; };
-		EFF0E4EA1F03FBA0008A337A /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
-		EFF0E4EB1F03FBA0008A337A /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
-		EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
-		EFF0E4ED1F03FBA0008A337A /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
-		EFF0E4EE1F03FBA0008A337A /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
-		EFF0E4EF1F03FBA0008A337A /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
-		EFF0E4F01F03FBA0008A337A /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
-		EFF0E4F11F03FBA0008A337A /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
-		EFF0E4F21F03FBA0008A337A /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
-		EFF0E4F31F03FBA0008A337A /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
-		EFF0E4F41F03FBA0008A337A /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
-		EFF0E4F51F03FBA0008A337A /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
-		EFF0E4F61F03FBA0008A337A /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
-		EFF0E4F71F03FBA0008A337A /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
-		EFF0E4F81F03FBA0008A337A /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
-		EFF0E4F91F03FBA0008A337A /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
-		EFF0E4FA1F03FBA0008A337A /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
-		EFF0E4FB1F03FBA0008A337A /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
-		EFF0E4FC1F03FBA0008A337A /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
-		EFF0E4FD1F03FBA0008A337A /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
-		EFF0E4FE1F03FBA0008A337A /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		EFF2612C1F1BBE3C00EEEEC8 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
 		EFF2612D1F1BBE3C00EEEEC8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		EFF2612E1F1BBE3C00EEEEC8 /* 10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 10.gif; sourceTree = "<group>"; };
@@ -472,6 +443,8 @@
 		EFF2624C1F1BBE6000EEEEC8 /* sdChatFaceImage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sdChatFaceImage.plist; sourceTree = "<group>"; };
 		EFF294561F0A9D8B0012E0E6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		EFF294571F0A9D8B0012E0E6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		F799B11035B9FDE28A827249 /* Pods-SDChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDChat/Pods-SDChat.release.xcconfig"; sourceTree = "<group>"; };
+		F9D84DD4DA8D475415992E26 /* libPods-SDChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +452,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6028C4D8485537F7A143AEA7 /* libPods-SDChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +473,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42F996119FD2338FE15BC8E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9D84DD4DA8D475415992E26 /* libPods-SDChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49947B3A0059A51474DA9EFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE1D2E7AE8466C13CE25BA6B /* Pods-SDChat.debug.xcconfig */,
+				F799B11035B9FDE28A827249 /* Pods-SDChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF6D591D1F388A9C00B0C1FD /* SDCategory */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +531,8 @@
 				EF8A1FBE1F02B19300E526B3 /* SDChatTests */,
 				EF8A1FC91F02B19300E526B3 /* SDChatUITests */,
 				EF8A1FA31F02B19300E526B3 /* Products */,
+				49947B3A0059A51474DA9EFF /* Pods */,
+				42F996119FD2338FE15BC8E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -727,45 +720,8 @@
 		EFF0E4E61F03FB53008A337A /* SDLib_resource */ = {
 			isa = PBXGroup;
 			children = (
-				EFF0E4E71F03FBA0008A337A /* MJExtension */,
 			);
 			path = SDLib_resource;
-			sourceTree = "<group>";
-		};
-		EFF0E4E71F03FBA0008A337A /* MJExtension */ = {
-			isa = PBXGroup;
-			children = (
-				EFF0E4E91F03FBA0008A337A /* MJExtension */,
-			);
-			path = MJExtension;
-			sourceTree = "<group>";
-		};
-		EFF0E4E91F03FBA0008A337A /* MJExtension */ = {
-			isa = PBXGroup;
-			children = (
-				EFF0E4EA1F03FBA0008A337A /* MJExtension.h */,
-				EFF0E4EB1F03FBA0008A337A /* MJExtensionConst.h */,
-				EFF0E4EC1F03FBA0008A337A /* MJExtensionConst.m */,
-				EFF0E4ED1F03FBA0008A337A /* MJFoundation.h */,
-				EFF0E4EE1F03FBA0008A337A /* MJFoundation.m */,
-				EFF0E4EF1F03FBA0008A337A /* MJProperty.h */,
-				EFF0E4F01F03FBA0008A337A /* MJProperty.m */,
-				EFF0E4F11F03FBA0008A337A /* MJPropertyKey.h */,
-				EFF0E4F21F03FBA0008A337A /* MJPropertyKey.m */,
-				EFF0E4F31F03FBA0008A337A /* MJPropertyType.h */,
-				EFF0E4F41F03FBA0008A337A /* MJPropertyType.m */,
-				EFF0E4F51F03FBA0008A337A /* NSObject+MJClass.h */,
-				EFF0E4F61F03FBA0008A337A /* NSObject+MJClass.m */,
-				EFF0E4F71F03FBA0008A337A /* NSObject+MJCoding.h */,
-				EFF0E4F81F03FBA0008A337A /* NSObject+MJCoding.m */,
-				EFF0E4F91F03FBA0008A337A /* NSObject+MJKeyValue.h */,
-				EFF0E4FA1F03FBA0008A337A /* NSObject+MJKeyValue.m */,
-				EFF0E4FB1F03FBA0008A337A /* NSObject+MJProperty.h */,
-				EFF0E4FC1F03FBA0008A337A /* NSObject+MJProperty.m */,
-				EFF0E4FD1F03FBA0008A337A /* NSString+MJExtension.h */,
-				EFF0E4FE1F03FBA0008A337A /* NSString+MJExtension.m */,
-			);
-			path = MJExtension;
 			sourceTree = "<group>";
 		};
 		EFF2612B1F1BBE3C00EEEEC8 /* chatFace */ = {
@@ -927,9 +883,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF8A1FCF1F02B19300E526B3 /* Build configuration list for PBXNativeTarget "SDChat" */;
 			buildPhases = (
+				CED02784DAB4CF2DEB5F7B72 /* [CP] Check Pods Manifest.lock */,
 				EF8A1F9E1F02B19300E526B3 /* Sources */,
 				EF8A1F9F1F02B19300E526B3 /* Frameworks */,
 				EF8A1FA01F02B19300E526B3 /* Resources */,
+				69F21ADDA7306A148B18A90D /* [CP] Embed Pods Frameworks */,
+				9BB75477B8E099D557C1E25F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1197,20 +1156,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69F21ADDA7306A148B18A90D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDChat/Pods-SDChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BB75477B8E099D557C1E25F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SDChat/Pods-SDChat-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDChat/Pods-SDChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CED02784DAB4CF2DEB5F7B72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF8A1F9E1F02B19300E526B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFF0E5011F03FBA0008A337A /* MJExtensionConst.m in Sources */,
 				EFF0E4C41F03E9E2008A337A /* SDChatDetailTableViewCell.m in Sources */,
-				EFF0E5081F03FBA0008A337A /* NSObject+MJKeyValue.m in Sources */,
-				EFF0E5071F03FBA0008A337A /* NSObject+MJCoding.m in Sources */,
-				EFF0E5041F03FBA0008A337A /* MJPropertyKey.m in Sources */,
 				EFF0E4CE1F03E9E2008A337A /* SDChatTableViewCell.m in Sources */,
 				EFF0E4C11F03E9E2008A337A /* SDChatAddFileKeyBoardView.m in Sources */,
 				EFF0E4CD1F03E9E2008A337A /* SDChatTableView.m in Sources */,
-				EFF0E5021F03FBA0008A337A /* MJFoundation.m in Sources */,
 				EF6D59331F388A9C00B0C1FD /* UIColor+SDHex.m in Sources */,
 				EFF0E4B71F03E9E2008A337A /* SDChatMessageConst.m in Sources */,
 				EFF0E4C61F03E9E2008A337A /* SDFaceListView.m in Sources */,
@@ -1225,23 +1233,18 @@
 				EF6D593C1F388AF900B0C1FD /* ViewController.m in Sources */,
 				EFF0E4C31F03E9E2008A337A /* SDChatDetailTableView.m in Sources */,
 				EFF0E4C81F03E9E2008A337A /* SDFaceView.m in Sources */,
-				EFF0E50A1F03FBA0008A337A /* NSString+MJExtension.m in Sources */,
 				EF6D59351F388A9C00B0C1FD /* UIView+SDFrame.m in Sources */,
 				EF6D59301F388A9C00B0C1FD /* NSObject+SDLogModel.m in Sources */,
 				EFF0E4BE1F03E9E2008A337A /* SDFaceArrTool.m in Sources */,
 				EFF0E4BD1F03E9E2008A337A /* NSString+Emoji.m in Sources */,
-				EFF0E5061F03FBA0008A337A /* NSObject+MJClass.m in Sources */,
 				EF6D593B1F388AF900B0C1FD /* AppDelegate.m in Sources */,
 				EFF0E4BC1F03E9E2008A337A /* SDFaceModel.m in Sources */,
 				EF8A1FA71F02B19300E526B3 /* main.m in Sources */,
 				EFF0E4B61F03E9E2008A337A /* SDChatViewController.m in Sources */,
 				EF6D592F1F388A9C00B0C1FD /* NSDictionary+SDLogLocale.m in Sources */,
-				EFF0E5051F03FBA0008A337A /* MJPropertyType.m in Sources */,
 				EF6D59311F388A9C00B0C1FD /* UIBarButtonItem+SDExtension.m in Sources */,
 				EFF0E4BA1F03E9E2008A337A /* SDChatMessage.m in Sources */,
-				EFF0E5031F03FBA0008A337A /* MJProperty.m in Sources */,
 				EF6D59321F388A9C00B0C1FD /* UIButton+buton_Text.m in Sources */,
-				EFF0E5091F03FBA0008A337A /* NSObject+MJProperty.m in Sources */,
 				EFF0E4C91F03E9E2008A337A /* SDFaceViewBtn.m in Sources */,
 				EFF0E4BB1F03E9E2008A337A /* SDChat.m in Sources */,
 				EFF0E4B81F03E9E2008A337A /* SDChatDetail.m in Sources */,
@@ -1395,6 +1398,7 @@
 		};
 		EF8A1FD01F02B19300E526B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE1D2E7AE8466C13CE25BA6B /* Pods-SDChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3PYAVNJVS7;
@@ -1409,6 +1413,7 @@
 		};
 		EF8A1FD11F02B19300E526B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F799B11035B9FDE28A827249 /* Pods-SDChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3PYAVNJVS7;
